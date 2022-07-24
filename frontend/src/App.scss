@@ -1,0 +1,21 @@
+@use "./scss/" as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: $font-family;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  text-rendering: optimizeSpeed;
+}
+.app {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}

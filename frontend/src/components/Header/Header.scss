@@ -1,0 +1,12 @@
+@use "../../scss/" as *;
+
+.header {
+  background-color: $clr-primary;
+  padding: 20px;
+  a {
+    display: block;
+    text-decoration: none;
+    color: $clr-gay;
+    font-weight: bold;
+  }
+}

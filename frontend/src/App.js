@@ -2,7 +2,7 @@ import "./App.scss";
 import Header from "./components/Header/Header";
 // import Products from "./components/Products/Products";
 
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Home from "./pages/Home/Home";
 import Product from "./pages/Product/Product";

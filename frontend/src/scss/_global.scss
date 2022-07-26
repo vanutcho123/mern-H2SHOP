@@ -1,0 +1,16 @@
+@keyframes opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes botToTop {
+  from {
+    transform: translateY(4rem);
+  }
+  to {
+    transform: translateX(0);
+  }
+}

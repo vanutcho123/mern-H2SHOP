@@ -1,5 +1,7 @@
 @use "./scss/" as *;
 
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -22,79 +24,6 @@ body {
   display: flex;
   flex-direction: column;
 }
-
-//Product
-
-.products {
-  display: grid;
-  grid-template-columns: auto auto auto auto;
-}
-.product {
-  @include flex(column, center, center);
-  border: 2px dashed transparent;
-  overflow: hidden;
-  &:hover {
-    border-color: $clr-gay;
-  }
-  &_img {
-    display: block;
-    max-width: 278px;
-    max-height: 278px;
-
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transform: scale(1);
-      transition: transform 0.3s ease-in-out;
-      &:hover {
-        transform: scale(1.07);
-      }
-    }
-  }
-
-  &_content {
-    @include flex(column, center, center);
-    padding: 10px 10px 20px;
-  }
-
-  &_category {
-    font-size: 1.2rem;
-    text-transform: uppercase;
-    line-height: 1.2;
-    letter-spacing: 0.1rem;
-    opacity: 0.7;
-    margin: 0.1rem 0;
-    color: $clr-primary;
-    margin-top: 5px;
-  }
-
-  &_name {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
-    margin-bottom: 15px;
-    text-align: center;
-
-    font-size: 1.4rem;
-    line-height: 1.3;
-    margin-top: 0.1rem;
-    color: $clr-primary;
-    text-decoration: none;
-  }
-  &_price {
-    @include flex(center, center, row);
-    font-size: 1.4rem;
-    &-initial {
-      opacity: 0.7;
-      font-weight: normal;
-      margin-right: 0.5rem;
-      text-decoration: line-through;
-    }
-    &-current {
-      font-weight: bold;
-    }
-  }
+.main {
+  position: relative;
 }

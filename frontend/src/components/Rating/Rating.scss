@@ -1,0 +1,19 @@
+@use "../../scss/" as *;
+
+.rating {
+  @include flex(row, center, center);
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+
+  &_starts {
+    color: $clr-secondary;
+    margin-right: 1rem;
+  }
+  &_numReviews {
+    color: $clr-primary;
+    span {
+      font-weight: bold;
+      text-transform: capitalize;
+    }
+  }
+}

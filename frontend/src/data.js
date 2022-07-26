@@ -9,7 +9,7 @@ const data = {
       initialPrice: 150,
       currentPrice: 120,
       countInStock: 10,
-      sale: "10%",
+      sale: 10,
       rating: 4.5,
       numReviews: 10,
       description:
@@ -24,7 +24,7 @@ const data = {
       initialPrice: 150,
       currentPrice: 120,
       countInStock: 10,
-      sale: "10%",
+      sale: 10,
       rating: 4.5,
       numReviews: 10,
       description:
@@ -39,7 +39,7 @@ const data = {
       initialPrice: 150,
       currentPrice: 120,
       countInStock: 10,
-      sale: "10%",
+      sale: 10,
       rating: 4.5,
       numReviews: 10,
       description:
@@ -54,7 +54,7 @@ const data = {
       initialPrice: 150,
       currentPrice: 120,
       countInStock: 10,
-      sale: "10%",
+      sale: 10,
       rating: 4.5,
       numReviews: 10,
       description:
@@ -69,7 +69,7 @@ const data = {
       initialPrice: 150,
       currentPrice: 120,
       countInStock: 10,
-      sale: "10%",
+      sale: 10,
       rating: 4.5,
       numReviews: 10,
       description:
@@ -84,7 +84,7 @@ const data = {
       initialPrice: 150,
       currentPrice: 120,
       countInStock: 10,
-      sale: "10%",
+      sale: 10,
       rating: 4.5,
       numReviews: 10,
       description:
@@ -99,8 +99,8 @@ const data = {
       initialPrice: 150,
       currentPrice: 120,
       countInStock: 0,
-      sale: "10%",
-      rating: 4.5,
+      sale: 100,
+      rating: 5,
       numReviews: 10,
       description:
         "Đồng hồ nam CASIO GA-110GB-1AVDF có thiết kế mới sử dụng kim loại màu vàng làm vạch số và kim nổi bật, sang trọng hơn so với thiết kế cũ nên mẫu GA-110GB-1AVDF rất được lòng giới trẻ hiện nay.",
@@ -114,7 +114,7 @@ const data = {
       initialPrice: 150,
       currentPrice: 120,
       countInStock: 10,
-      sale: "10%",
+      sale: 10,
       rating: 4.5,
       numReviews: 10,
       description:
@@ -129,7 +129,7 @@ const data = {
       initialPrice: 150,
       currentPrice: 120,
       countInStock: 10,
-      sale: "10%",
+      sale: 10,
       rating: 4.5,
       numReviews: 10,
       description:
@@ -144,7 +144,7 @@ const data = {
       initialPrice: 150,
       currentPrice: 120,
       countInStock: 10,
-      sale: "10%",
+      sale: 10,
       rating: 4.5,
       numReviews: 10,
       description:
@@ -159,7 +159,7 @@ const data = {
       initialPrice: 150,
       currentPrice: 120,
       countInStock: 10,
-      sale: "10%",
+      sale: 10,
       rating: 4.5,
       numReviews: 10,
       description:
@@ -174,7 +174,7 @@ const data = {
       initialPrice: 150,
       currentPrice: 120,
       countInStock: 10,
-      sale: "10%",
+      sale: 10,
       rating: 4.5,
       numReviews: 10,
       description:
@@ -189,7 +189,7 @@ const data = {
       initialPrice: 150,
       currentPrice: 120,
       countInStock: 10,
-      sale: "10%",
+      sale: 10,
       rating: 4.5,
       numReviews: 10,
       description:
@@ -204,7 +204,7 @@ const data = {
       initialPrice: 150,
       currentPrice: 120,
       countInStock: 10,
-      sale: "10%",
+      sale: 10,
       rating: 4.5,
       numReviews: 10,
       description:
@@ -219,7 +219,7 @@ const data = {
       initialPrice: 150,
       currentPrice: 120,
       countInStock: 10,
-      sale: "10%",
+      sale: 10,
       rating: 4.5,
       numReviews: 10,
       description:
@@ -234,7 +234,7 @@ const data = {
       initialPrice: 150,
       currentPrice: 120,
       countInStock: 10,
-      sale: "10%",
+      sale: 10,
       rating: 4.5,
       numReviews: 10,
       description:
@@ -249,7 +249,7 @@ const data = {
       initialPrice: 150,
       currentPrice: 120,
       countInStock: 10,
-      sale: "10%",
+      sale: 10,
       rating: 4.5,
       numReviews: 10,
       description:
@@ -264,7 +264,7 @@ const data = {
       initialPrice: 150,
       currentPrice: 120,
       countInStock: 10,
-      sale: "10%",
+      sale: 10,
       rating: 4.5,
       numReviews: 10,
       description:
@@ -279,7 +279,7 @@ const data = {
       initialPrice: 150,
       currentPrice: 120,
       countInStock: 10,
-      sale: "10%",
+      sale: 10,
       rating: 4.5,
       numReviews: 10,
       description:
@@ -294,7 +294,7 @@ const data = {
       initialPrice: 150,
       currentPrice: 120,
       countInStock: 10,
-      sale: "10%",
+      sale: 10,
       rating: 4.5,
       numReviews: 10,
       description:
@@ -309,7 +309,7 @@ const data = {
       initialPrice: 150,
       currentPrice: 120,
       countInStock: 10,
-      sale: "10%",
+      sale: 10,
       rating: 4.5,
       numReviews: 10,
       description:
@@ -324,7 +324,7 @@ const data = {
       initialPrice: 150,
       currentPrice: 120,
       countInStock: 10,
-      sale: "10%",
+      sale: 10,
       rating: 4.5,
       numReviews: 10,
       description:
@@ -339,7 +339,7 @@ const data = {
       initialPrice: 150,
       currentPrice: 120,
       countInStock: 10,
-      sale: "10%",
+      sale: 10,
       rating: 4.5,
       numReviews: 10,
       description:
@@ -354,7 +354,7 @@ const data = {
       initialPrice: 150,
       currentPrice: 120,
       countInStock: 10,
-      sale: "10%",
+      sale: 10,
       rating: 4.5,
       numReviews: 10,
       description:
@@ -369,7 +369,7 @@ const data = {
       initialPrice: 150,
       currentPrice: 120,
       countInStock: 10,
-      sale: "10%",
+      sale: 10,
       rating: 4.5,
       numReviews: 10,
       description:
@@ -384,7 +384,7 @@ const data = {
       initialPrice: 150,
       currentPrice: 120,
       countInStock: 10,
-      sale: "10%",
+      sale: 10,
       rating: 4.5,
       numReviews: 10,
       description:

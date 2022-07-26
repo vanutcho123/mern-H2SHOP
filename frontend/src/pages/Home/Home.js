@@ -1,7 +1,10 @@
 import { React, useEffect, useReducer } from "react";
-import { Link } from "react-router-dom";
 import axios from "axios";
 import logger from "use-reducer-logger";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+
+import Product from "../../components/Product/Product";
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -42,28 +45,13 @@ const Home = () => {
         ) : error ? (
           <div>{error}</div>
         ) : (
-          products.map(product => (
-            <div className="product" key={product.slug}>
-              <Link to={`/product/${product.slug}`} className="product_img">
-                <img src={product.image} alt={product.name} />
-              </Link>
-              <div className="product_content">
-                <h4 className="product_category">{product.category}</h4>
-                <Link to={`/product/${product.slug}`} className="product_name">
-                  <h3>{product.name}</h3>
-                </Link>
-
-                <div className="product_price">
-                  <span className="product_price-initial">
-                    {product.initialPrice}
-                  </span>
-                  <span className="product_price-current">
-                    {product.currentPrice}
-                  </span>
-                </div>
-              </div>
-            </div>
-          ))
+          <Row>
+            {products.map(product => (
+              <Col sm={6} md={4} lg={3} className="mb-3" key={product.slug}>
+                <Product product={product} />
+              </Col>
+            ))}
+          </Row>
         )}
       </div>
     </div>

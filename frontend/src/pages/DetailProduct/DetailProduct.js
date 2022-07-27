@@ -11,6 +11,9 @@ import { Link } from "react-router-dom";
 
 import "./DetailProduct.scss";
 import Rating from "../../components/Rating/Rating";
+import LoadingBox from "../../components/LoadingBox/LoadingBox";
+import MessageBox from "../../components/MessageBox/MessageBox";
+import { getError } from "../../utils";
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -40,15 +43,15 @@ const DetailProduct = () => {
         const result = await axios.get(`/api/products/slug/${slug}`);
         dispatch({ type: "FETCH_SUCCESS", payload: result.data });
       } catch (err) {
-        dispatch({ type: "FETCH_FAIL", payload: err.message });
+        dispatch({ type: "FETCH_FAIL", payload: getError(err) });
       }
     };
     fetchData();
   }, [slug]);
   return loading ? (
-    <div>Loading...</div>
+    <LoadingBox />
   ) : error ? (
-    <div>{error}</div>
+    <MessageBox variant="danger">{error}</MessageBox>
   ) : (
     <div className="detailProduct">
       <Helmet>
@@ -150,7 +153,12 @@ const DetailProduct = () => {
                   </span>
                   <span className="fw-bold">${product.currentPrice}</span>
                 </div>
+                <Rating
+                  numReviews={product.numReviews}
+                  rating={product.rating}
+                />
                 <p className="mb-4">{product.description}</p>
+                <div className="mb-4"></div>
                 {product.countInStock > 0 ? (
                   <div className="mb-5">
                     <Button className="btn btn-primary add-to-cart">

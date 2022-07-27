@@ -1,7 +1,8 @@
 @use "../../scss/" as *;
 
 .rating {
-  @include flex(row, center, center);
+  display: flex;
+  align-items: center;
   font-size: 1.2rem;
   margin-bottom: 1rem;
 

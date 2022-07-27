@@ -1,0 +1,127 @@
+@use "../../scss/" as *;
+
+.detailProduct {
+  $clr-border-zoom: #ccc;
+  $clr-nav-detailProduct: #666;
+  padding: 4rem 0;
+  &_sale {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    background-color: $clr-secondary;
+    height: 7rem;
+    width: 7rem;
+    line-height: 7rem;
+    text-align: center;
+    border-radius: 100rem;
+    color: $clr-white;
+    font-size: 2.4rem;
+    font-weight: bold;
+    letter-spacing: 0;
+  }
+  &_zoom {
+    i {
+      font-size: 2rem;
+      color: $clr-border-zoom;
+      cursor: pointer;
+      border: 2px solid;
+      padding: 1.3rem;
+      border-radius: 100rem;
+      &:hover {
+        background-color: $clr-primary;
+      }
+    }
+  }
+  nav {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    color: $clr-nav-detailProduct;
+    a {
+      color: $clr-nav-detailProduct;
+    }
+  }
+  &_name {
+    font-size: 2.7rem;
+    margin-bottom: 1rem;
+  }
+  .add-to-cart {
+    background-color: $clr-secondary;
+    font-size: 1.6rem;
+    font-weight: 600;
+    border: none;
+    outline: none;
+    padding: 1rem 2rem;
+    &:hover {
+      background-color: $clr-primary;
+    }
+  }
+  &_code {
+    font-size: 1.3rem;
+    color: $clr-primary;
+    padding: 1rem 0;
+    border-top: 1px solid $clr-gray;
+    border-bottom: 1px solid $clr-gray;
+    span {
+      margin-left: 2rem;
+    }
+  }
+  &_img {
+    max-width: 428px;
+    max-height: 428px;
+    text-align: center;
+    margin: 0 auto;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+//Sidebar
+.sidebar {
+  padding-right: 2rem;
+  border-right: 1px solid $clr-gray;
+  &-title {
+    font-size: 1.6rem;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  &-img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+  }
+  &-name {
+    font-size: 1.4rem;
+    color: $clr-text-primary;
+    font-weight: 400;
+    text-transform: capitalize;
+    &:hover {
+      color: $clr-secondary;
+    }
+  }
+  &-price {
+    font-weight: bold;
+    padding: 0;
+  }
+}
+.list-group-item {
+  display: flex;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+///Product detail
+
+.img-large {
+  max-width: 428px;
+  max-height: 428px;
+  object-fit: cover;
+  position: relative;
+}

@@ -1,11 +1,9 @@
 import "./App.scss";
-import Header from "./components/Header/Header";
-// import Products from "./components/Products/Products";
-
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
+import Header from "./components/Header/Header";
 import Home from "./pages/Home/Home";
-import Product from "./pages/Product/Product";
+import DetailProduct from "./pages/DetailProduct/DetailProduct";
 import Container from "react-bootstrap/esm/Container";
 
 function App() {
@@ -17,7 +15,7 @@ function App() {
           <Container>
             <Routes>
               <Route path="/" element={<Home />} />
-              <Route path="/product/:slug" element={<Product />} />
+              <Route path="/product/:slug" element={<DetailProduct />} />
             </Routes>
           </Container>
         </main>

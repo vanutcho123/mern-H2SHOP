@@ -1,10 +1,8 @@
-import React from "react";
+import { React, useContext, useEffect, useReducer } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
-import { useEffect, useReducer } from "react";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import ListGroup from "react-bootstrap/ListGroup";
 import { Helmet } from "react-helmet-async";
 import Button from "react-bootstrap/esm/Button";
 import { Link } from "react-router-dom";
@@ -14,6 +12,8 @@ import Rating from "../../components/Rating/Rating";
 import LoadingBox from "../../components/LoadingBox/LoadingBox";
 import MessageBox from "../../components/MessageBox/MessageBox";
 import { getError } from "../../utils";
+import { Store } from "../../Context/Store";
+import Sidebar from "../../components/Sidebar/Sidebar";
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -48,6 +48,16 @@ const DetailProduct = () => {
     };
     fetchData();
   }, [slug]);
+
+  //Context
+  const { state, dispatch: ctxDispatch } = useContext(Store);
+  const addToCartHandler = () => {
+    ctxDispatch({
+      type: "CART_ADD_ITEM",
+      payload: { ...product, quantity: 1 },
+    });
+  };
+
   return loading ? (
     <LoadingBox />
   ) : error ? (
@@ -59,67 +69,7 @@ const DetailProduct = () => {
       </Helmet>
       <Row>
         <Col md={3}>
-          <div className="sidebar">
-            <h2 className="sidebar-title">Sản phẩm</h2>
-            <span className="divider"></span>
-            <ListGroup>
-              <ListGroup.Item>
-                <img
-                  src={product.image}
-                  className="sidebar-img"
-                  alt={product.name}
-                />
-                <div>
-                  <h2 className="sidebar-name">{product.name}</h2>
-                  <p className="sidebar-price">${product.currentPrice}</p>
-                </div>
-              </ListGroup.Item>
-              <ListGroup.Item>
-                <img
-                  src={product.image}
-                  className="sidebar-img"
-                  alt={product.name}
-                />
-                <div>
-                  <h2 className="sidebar-name">{product.name}</h2>
-                  <p className="sidebar-price">${product.currentPrice}</p>
-                </div>
-              </ListGroup.Item>
-              <ListGroup.Item>
-                <img
-                  src={product.image}
-                  className="sidebar-img"
-                  alt={product.name}
-                />
-                <div>
-                  <h2 className="sidebar-name">{product.name}</h2>
-                  <p className="sidebar-price">${product.currentPrice}</p>
-                </div>
-              </ListGroup.Item>
-              <ListGroup.Item>
-                <img
-                  src={product.image}
-                  className="sidebar-img"
-                  alt={product.name}
-                />
-                <div>
-                  <h2 className="sidebar-name">{product.name}</h2>
-                  <p className="sidebar-price">${product.currentPrice}</p>
-                </div>
-              </ListGroup.Item>
-              <ListGroup.Item>
-                <img
-                  src={product.image}
-                  className="sidebar-img"
-                  alt={product.name}
-                />
-                <div>
-                  <h2 className="sidebar-name">{product.name}</h2>
-                  <p className="sidebar-price">${product.currentPrice}</p>
-                </div>
-              </ListGroup.Item>
-            </ListGroup>
-          </div>
+          <Sidebar product={product} />
         </Col>
         <Col md={9}>
           <Row>
@@ -161,7 +111,10 @@ const DetailProduct = () => {
                 <div className="mb-4"></div>
                 {product.countInStock > 0 ? (
                   <div className="mb-5">
-                    <Button className="btn btn-primary add-to-cart">
+                    <Button
+                      onClick={addToCartHandler}
+                      className="btn btn-primary add-to-cart"
+                    >
                       THÊM VÀO GIỎ
                     </Button>
                   </div>

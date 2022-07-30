@@ -83,40 +83,6 @@
   }
 }
 
-//Sidebar
-.sidebar {
-  padding-right: 2rem;
-  border-right: 1px solid $clr-gray;
-  &-title {
-    font-size: 1.6rem;
-    font-weight: 600;
-    text-transform: uppercase;
-  }
-  &-img {
-    width: 60px;
-    height: 60px;
-    object-fit: cover;
-  }
-  &-name {
-    font-size: 1.4rem;
-    color: $clr-text-primary;
-    font-weight: 400;
-    text-transform: capitalize;
-    &:hover {
-      color: $clr-secondary;
-    }
-  }
-  &-price {
-    font-weight: bold;
-    padding: 0;
-  }
-}
-.list-group-item {
-  display: flex;
-  padding: 0.5rem;
-  cursor: pointer;
-}
-
 ///Product detail
 
 .img-large {

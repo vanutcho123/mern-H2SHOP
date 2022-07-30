@@ -5,6 +5,7 @@ import Header from "./components/Header/Header";
 import Home from "./pages/Home/Home";
 import DetailProduct from "./pages/DetailProduct/DetailProduct";
 import Container from "react-bootstrap/esm/Container";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -19,11 +20,7 @@ function App() {
             </Routes>
           </Container>
         </main>
-        <footer>
-          <div className="text-center">
-            Create by NGUYENVANHAI| 2021 All Right reserved.
-          </div>
-        </footer>
+        <Footer />
       </div>
     </BrowserRouter>
   );

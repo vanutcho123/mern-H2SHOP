@@ -5,11 +5,17 @@ import Container from "react-bootstrap/Container";
 import { LinkContainer } from "react-router-bootstrap";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import Nav from "react-bootstrap/Nav";
+import Badge from "react-bootstrap/Badge";
+import { useContext } from "react";
+import { Store } from "../../Context/Store";
+import { Link } from "react-router-dom";
 
 const Header = () => {
+  const { state } = useContext(Store);
+  const { cart } = state;
   return (
     <header>
-      <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+      <Navbar collapseOnSelect expand="lg" bg="black" variant="dark">
         <Container>
           <LinkContainer to="/">
             <Navbar.Brand>H2SHOP</Navbar.Brand>
@@ -38,11 +44,15 @@ const Header = () => {
 
               <Nav.Link href="#pricing">Liên hệ</Nav.Link>
             </Nav>
-            <Nav>
-              <Nav.Link href="#deets">More deets</Nav.Link>
-              <Nav.Link eventKey={2} href="#memes">
-                Dank memes
-              </Nav.Link>
+            <Nav className="me-auto">
+              <Link to="/cart" className="nav-link">
+                Cart
+                {cart.cartItems.length > 0 && (
+                  <Badge pill bg="danger">
+                    {cart.cartItems.length}
+                  </Badge>
+                )}
+              </Link>
             </Nav>
           </Navbar.Collapse>
         </Container>

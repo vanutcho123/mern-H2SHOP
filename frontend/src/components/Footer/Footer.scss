@@ -1,0 +1,76 @@
+@use "../../scss/" as *;
+
+.footer {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  a {
+    display: block;
+    display: block;
+    text-decoration: none;
+    color: $clr-white;
+    margin-bottom: 0.5rem;
+    &:hover {
+      color: $clr-secondary;
+    }
+    i {
+      margin-right: 5px;
+    }
+  }
+  p {
+    font-size: 1.5rem;
+    line-height: 1.3;
+  }
+  input {
+    padding: 10px;
+    font-size: 1.4rem;
+    color: $clr-primary;
+    outline: none;
+    width: 100%;
+    border: none;
+    border-radius: 0.5rem;
+  }
+  .icon-enter {
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: $clr-primary;
+    padding: 1rem 1.2rem;
+    font-weight: 400;
+    border-radius: 0.5rem;
+
+    &:hover {
+      background-color: $clr-gray;
+      cursor: pointer;
+    }
+  }
+
+  &_logo {
+    font-size: 4rem;
+    font-weight: bold;
+    line-height: 1.5;
+    letter-spacing: 1px;
+    font-family: Georgia, "Times New Roman", Times, serif;
+  }
+  &_end {
+    background-color: $clr-secondary;
+    color: $clr-primary;
+  }
+  .py-40 {
+    padding: 4rem 0 !important;
+  }
+  .p-30 {
+    padding: 3rem !important;
+  }
+  .p-30-60 {
+    padding: 3rem 6rem;
+    border-left: 1px dashed $clr-gray;
+    border-right: 1px dashed $clr-gray;
+  }
+  .mt-50 {
+    margin-top: 5rem;
+  }
+  .mt-30 {
+    margin-top: 3rem;
+  }
+}

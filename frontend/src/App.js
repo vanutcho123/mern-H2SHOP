@@ -1,10 +1,11 @@
 import "./App.scss";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-
-import Header from "./components/Header/Header";
-import Home from "./pages/Home/Home";
-import DetailProduct from "./pages/DetailProduct/DetailProduct";
 import Container from "react-bootstrap/esm/Container";
+
+import DetailProduct from "./pages/DetailProduct/DetailProduct";
+import Home from "./pages/Home/Home";
+import Cart from "./pages/Cart/Cart";
+import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 
 function App() {
@@ -13,10 +14,11 @@ function App() {
       <div className="app">
         <Header />
         <main>
-          <Container>
+          <Container className="py-5">
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/product/:slug" element={<DetailProduct />} />
+              <Route path="/cart" element={<Cart />} />
             </Routes>
           </Container>
         </main>

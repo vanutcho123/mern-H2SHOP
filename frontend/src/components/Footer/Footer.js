@@ -60,7 +60,7 @@ const Footer = () => {
           </Col>
         </Row>
       </Container>
-      <div class="text-center footer_end">
+      <div className="text-center footer_end">
         Create by NGUYENVANHAI| 2022 All Right reserved.
       </div>
     </div>

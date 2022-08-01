@@ -1,5 +1,5 @@
 import { React, useContext, useEffect, useReducer } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -29,6 +29,7 @@ const reducer = (state, action) => {
 };
 
 const DetailProduct = () => {
+  const navigate = useNavigate();
   const params = useParams();
   const { slug } = params;
   const [{ loading, error, product }, dispatch] = useReducer(reducer, {
@@ -56,6 +57,7 @@ const DetailProduct = () => {
       type: "CART_ADD_ITEM",
       payload: { ...product, quantity: 1 },
     });
+    navigate("/cart");
   };
 
   return loading ? (

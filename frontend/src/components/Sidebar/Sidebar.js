@@ -4,7 +4,6 @@ import ListGroup from "react-bootstrap/ListGroup";
 import "./Sidebar.scss";
 
 const Sidebar = props => {
-  console.log(props);
   const { product } = props;
   return (
     <div className="sidebar">

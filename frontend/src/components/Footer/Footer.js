@@ -34,8 +34,8 @@ const Footer = () => {
               <div>
                 <p>
                   Là một website bán hàng trực tuyến.Nơi tập trung các dòng sản
-                  phẩm , thương hiệu cao cấp.Bảo đảm mang đến cho bạn một trải
-                  nghiệm tốt nhất!!!!
+                  phẩm , thương hiệu cao cấp.Bảo đảm chất lượng mang đến cho bạn
+                  một trải nghiệm tốt nhất!!!!
                 </p>
                 <Form className="mt-50">
                   <Form.Group className="position-relative overflow-hidden">

@@ -2,19 +2,39 @@ import { React, useContext } from "react";
 import { Helmet } from "react-helmet-async";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Button from "react-bootstrap/esm/Button";
 import Table from "react-bootstrap/Table";
+import axios from "axios";
 
 import { Store } from "../../Context/Store";
 import MessageBox from "../../components/MessageBox/MessageBox";
 import "./Cart.scss";
 
 const Cart = () => {
+  const navigate = useNavigate();
   const { state, dispatch: ctxDispatch } = useContext(Store);
   const {
     cart: { cartItems },
   } = state;
+
+  const updateCartHandler = async (item, quantity) => {
+    const { data } = await axios.get(`/api/products/${item._id}`);
+    if (data.countInStock < quantity) {
+      window.alert("Xin lỗi! Sản phẩm đã hết hàng");
+      return;
+    }
+    ctxDispatch({
+      type: "CART_ADD_ITEM",
+      payload: { ...item, quantity },
+    });
+  };
+  const removeItemHandler = item => {
+    ctxDispatch({ type: "CART_REMOVE_ITEM", payload: item });
+  };
+  const checkoutHandler = () => {
+    navigate("/signin?redirect=/shipping");
+  };
   return (
     <div className="cart">
       <Helmet>
@@ -38,7 +58,7 @@ const Cart = () => {
           <Col md={7} className="px-4">
             <Table className="table">
               <thead>
-                <tr className="border-bottom-1 border-secondary">
+                <tr className="border-bottom border-2 border-secondary">
                   <th colSpan="3">Sản phẩm</th>
                   <th>Giá</th>
                   <th>Số lượng</th>
@@ -46,9 +66,12 @@ const Cart = () => {
               </thead>
               <tbody>
                 {cartItems.map(item => (
-                  <tr className="cart_product " key={item.slug}>
+                  <tr className="cart_product " key={item._id}>
                     <th className="cart_product-remove">
-                      <Button variant="light">
+                      <Button
+                        onClick={() => removeItemHandler(item)}
+                        variant="light"
+                      >
                         <i className="fas fa-trash"></i>
                       </Button>
                     </th>
@@ -63,12 +86,21 @@ const Cart = () => {
                       <span>{item.currentPrice}</span>
                     </th>
                     <th className="cart_product-quantity">
-                      <Button variant="light" disabled={item.quantity === 1}>
+                      <Button
+                        variant="light"
+                        onClick={() =>
+                          updateCartHandler(item, item.quantity - 1)
+                        }
+                        disabled={item.quantity === 1}
+                      >
                         <i className="fas fa-minus-circle"></i>
                       </Button>{" "}
                       <span>{item.quantity}</span>{" "}
                       <Button
                         variant="light"
+                        onClick={() =>
+                          updateCartHandler(item, item.quantity + 1)
+                        }
                         disabled={item.quantity === item.countInStock}
                       >
                         <i className="fas fa-plus-circle"></i>
@@ -85,7 +117,7 @@ const Cart = () => {
           <Col md={5} className="px-5 cart_left">
             <Table className="table fs-4">
               <thead className="w-full">
-                <tr>
+                <tr className="border-bottom border-2 border-secondary">
                   <th colSpan={2}>Tổng sản phẩm</th>
                 </tr>
               </thead>
@@ -118,37 +150,14 @@ const Cart = () => {
               </tbody>
             </Table>
             <div className="cart_proceed d-grid">
-              <Button type="button" disabled={cartItems.length === 0}>
+              <Button
+                type="button"
+                onClick={checkoutHandler}
+                disabled={cartItems.length === 0}
+              >
                 Tiến hành thanh toán
               </Button>
             </div>
-            {/* <Card>
-              <Card.Body>
-                <ListGroup variant="flush">
-                  <ListGroup.Item>
-                    <h3>
-                      Subtotal ({cartItems.reduce((a, c) => a + c.quantity, 0)}{" "}
-                      items) : $
-                      {cartItems.reduce(
-                        (a, c) => a + c.currentPrice * c.quantity,
-                        0
-                      )}
-                    </h3>
-                  </ListGroup.Item>
-                  <ListGroup.Item>
-                    <div className="d-grid">
-                      <Button
-                        type="button"
-                        variant="primary"
-                        disabled={cartItems.length === 0}
-                      >
-                        Proceed to Checkout
-                      </Button>
-                    </div>
-                  </ListGroup.Item>
-                </ListGroup>
-              </Card.Body>
-            </Card> */}
           </Col>
         </Row>
       )}

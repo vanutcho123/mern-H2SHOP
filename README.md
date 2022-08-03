@@ -69,3 +69,6 @@
     1. Create sign in form
     2. Add email and password
     3. Add SignIn button
+16. Connect to MongoDB Database
+    1. Create atlas mongodb database
+    2. Connect to mongodb database

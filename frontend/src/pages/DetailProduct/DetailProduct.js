@@ -134,7 +134,7 @@ const DetailProduct = () => {
                   </p>
                 )}
                 <div className="detailProduct_code">
-                  Mã: <span>{product._id}</span>
+                  Mã: <span className="fw-bold">{product._id}</span>
                 </div>
               </div>
             </Col>

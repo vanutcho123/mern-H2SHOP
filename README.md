@@ -72,3 +72,9 @@
 16. Connect to MongoDB Database
     1. Create atlas mongodb database
     2. Connect to mongodb database
+17. Seed Sample Data
+    1. Create Product Model
+    2. Create User Model
+    3. Create Seed Route
+    4. Use Route in Server.js
+    5. Seed Sample Product

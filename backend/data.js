@@ -1,7 +1,7 @@
 const data = {
   products: [
     {
-      _id: "1",
+      //_id: "1",
       slug: "dong-ho-louis-erard-13900aa05-bdc102-nam-pin-day-da",
       name: "ĐỒNG-HỒ-LOUIS-ERARD-13900AA05.BDC102 NAM PIN DÂY DA",
       category: "ĐỒNG HỒ NAM",
@@ -16,7 +16,7 @@ const data = {
         "Đây là dòng sản phẩm tuyệt vời cho những người đang tìm kiếm chiếc đồng hồ được thiết kế riêng mang đầy đủ sự “chất” Vintage cho đến hiện nay, đó là “chất cổ điển” và chỉ là “cổ điển” tinh khiết.",
     },
     {
-      _id: "2",
+      //_id: "2",
       slug: "dong-ho-citizen-au1080-20a-nam-eco-drive-day-vai",
       name: "ĐỒNG HỒ CITIZEN AU1080-20A NAM ECO-DRIVE DÂY VẢI",
       category: "ĐỒNG HỒ NAM",
@@ -31,7 +31,7 @@ const data = {
         "Đồng hồ nam Citizen AU1080-20A nổi bật Pin sử dụng công nghệ hiện đại Eco-Drive (Năng Lượng Ánh Sáng), với thiết kế theo phong cách thời trang với dây đeo chất liệu bằng vải tông màu kem trẻ trung.",
     },
     {
-      _id: "3",
+      //_id: "3",
       slug: "dong-ho-tissot-t063-907-11-058-00-nam-tu-dong-day-inox",
       name: "ĐỒNG HỒ TISSOT T063.907.11.058.00 NAM TỰ ĐỘNG DÂY INOX",
       category: "ĐỒNG HỒ NAM",
@@ -46,7 +46,7 @@ const data = {
         "Giản dị và thanh lịch đến từ mẫu đồng hồ Tissot T063.907.11.058.00, được gia công tạo hình với kiểu dáng mỏng tạo nên vẻ tinh tế đầy sang trọng cùng chi tiết kim chỉ vạch số được bao phủ vàng hồng.",
     },
     {
-      _id: "4",
+      //_id: "4",
       slug: "dong-ho-seiko-sgeg99p1-nam-pin-day-da",
       name: "ĐỒNG HỒ SEIKO SGEG99P1 NAM PIN DÂY DA",
       category: "ĐỒNG HỒ NAM",
@@ -61,7 +61,7 @@ const data = {
         "Đồng hồ Seiko SGEG99P1 dành cho nam, mặt đồng hồ màu đen, chữ số La Mã lớn màu trắng, vỏ thép không gỉ, dây da màu đen, mặt kính Sapphire chịu lực chống trầy, 1 ô lịch hiển thị ngày.",
     },
     {
-      _id: "5",
+      //_id: "5",
       slug: "dong-ho-orient-fstaa002w0-nam-pin-day-da",
       name: "ĐỒNG HỒ ORIENT FSTAA002W0 NAM PIN DÂY DA",
       category: "ĐỒNG HỒ NAM",
@@ -76,7 +76,7 @@ const data = {
         "Đồng hồ Orient FSTAA002W0 có vỏ kim loại phủ màu vàng sang trọng, kim chỉ và vạch số thanh mãnh nổi bật trên nền số, ô lịch ngày vị trí 3h tinh tế, dây đeo bằng chất liệu da cao cấp màu nâu đem lại phong cách lịch lãm, sang trọng cho phái mạnh",
     },
     {
-      _id: "6",
+      //_id: "6",
       slug: "dong-ho-olym-pianus-op99141-71agsk-trang-nam-tu-dong-day-inox",
       name: "ĐỒNG HỒ OLYM PIANUS OP99141-71AGSK TRẮNG NAM TỰ ĐỘNG DÂY INOX",
       category: "ĐỒNG HỒ NAM",
@@ -91,7 +91,7 @@ const data = {
         "Mẫu đồng hồ Olym Pianus OP99141-71AGSK vẻ ngoài tinh tế sang trọng ấn tượng với kiểu thiết kế độc đáo đến từ ô chân kính phô diễn ra 1 phần trải nghiệm hoạt động của bộ máy cơ đầy nam tính.",
     },
     {
-      _id: "7",
+      //_id: "7",
       slug: "dong-ho-casio-ga-110gb-1adr-nam-pin-day-nhua",
       name: "ĐỒNG HỒ CASIO GA-110GB-1ADR NAM PIN DÂY NHỰA",
       category: "ĐỒNG HỒ NAM",
@@ -106,7 +106,7 @@ const data = {
         "Đồng hồ nam CASIO GA-110GB-1AVDF có thiết kế mới sử dụng kim loại màu vàng làm vạch số và kim nổi bật, sang trọng hơn so với thiết kế cũ nên mẫu GA-110GB-1AVDF rất được lòng giới trẻ hiện nay.",
     },
     {
-      _id: "8",
+      //_id: "8",
       slug: "dong-ho-casio-mtp-1374l-1avdf-nam-pin-day-da",
       name: "ĐỒNG HỒ CASIO MTP-1374L-1AVDF NAM PIN DÂY DA",
       category: "ĐỒNG HỒ NAM",
@@ -121,7 +121,7 @@ const data = {
         "Đồng hồ nam CASIO MTP-1374L-1AVDF thay cho thiết kế cửa sổ lich cổ điển là thiết kế mới lịch ngày và thứ đều sử dụng đồng hồ kim mang tính hiện đại, trẻ trung. Nổi bật trên nền mặt số đen là thiết kế phá cách kim giây đỏ làm điểm nhấn nổi bật. Dây đeo bằng da tạo vân cá sấu nổi bật với hai đường chỉ may trắng tinh xảo.",
     },
     {
-      _id: "9",
+      //_id: "9",
       slug: "dong-ho-tissot-t41-1-183-34-nu-tu-dong-day-inox",
       name: "ĐỒNG HỒ TISSOT T41.1.183.34 NỮ TỰ ĐỘNG DÂY INOX",
       category: "ĐỒNG HỒ NỮ",
@@ -136,7 +136,7 @@ const data = {
         "Mẫu Tissot T41.1.183.34 vẻ ngoài giản dị của chiếc đồng hồ 3 kim nhưng lại khoác lên sự trang nhã với nền mặt số được phối tông màu trắng trước bề mặt kính Sapphire kết hợp cùng tổng thể chiếc đồng hồ kim loại màu bạc đầy sang trọng.",
     },
     {
-      _id: "10",
+      //_id: "10",
       slug: "dong-ho-citizen-ex1410-88a-nu-eco-drive-day-inox",
       name: "ĐỒNG HỒ CITIZEN EX1410-88A NỮ ECO-DRIVE DÂY INOX",
       category: "ĐỒNG HỒ NỮ",
@@ -151,7 +151,7 @@ const data = {
         "Đồng hồ Citizen EX1410-88A có mặt số hình chữ nhật bầu tinh tế, kim chỉ và vạch số thanh mãnh nổi bật trên nền số màu trắng trang nhã, phần quai được đính pha lê Swarovski sang trọng mang đến vẻ thanh lịch, duyên dáng dành cho phái nữ.",
     },
     {
-      _id: "11",
+      //_id: "11",
       slug: "dong-ho-ogival-og385-032lw-t-nũ-pin-day-inox",
       name: "ĐỒNG HỒ OGIVAL OG385-032LW-T NỮ PIN DÂY INOX",
       category: "ĐỒNG HỒ NỮ",
@@ -166,7 +166,7 @@ const data = {
         "Vẻ ngoài trẻ trung với phần mặt số được phối tông nền trắng có họa tiết thời trang nam tính với vỏ máy dày dặn chứa đựng một trải nghiệm nam tính từ bộ may cơ là yếu tố tạo nên mẫu đồng hồ nam Ogival.",
     },
     {
-      _id: "12",
+      //_id: "12",
       slug: "dong-ho-candino-c4433-3-nũ-pin-day-inox",
       name: "ĐỒNG HỒ CANDINO C4433/3 NỮ PIN DÂY INOX",
       category: "ĐỒNG HỒ NỮ",
@@ -181,7 +181,7 @@ const data = {
         "Đồng hồ dây da thời trang nữ Candino C4433/3, với mặt đồng hồ sang trọng nền trắng có ánh xà cừ có đính hạt pha lê viền xung quang, kính Sapphire, chữ số lớn dễ đọc, 3 kim chỉ màu bạc.",
     },
     {
-      _id: "13",
+      //_id: "13",
       slug: "dong-ho-skagen-885sslb-nu-pin-day-da",
       name: "ĐỒNG HỒ SKAGEN 885SSLB NỮ PIN DÂY DA",
       category: "ĐỒNG HỒ NỮ",
@@ -196,7 +196,7 @@ const data = {
         "Đồng hồ độc đáo dành cho nữ giới Skagen 885SSLB, với vỏ đồng hồ là thép không gỉ, kiểu dáng xoáy, mặt đồng hồ có trắng, dây da màu đen cao cấp, còn có 2 kim chỉ tinh tế.",
     },
     {
-      _id: "14",
+      //_id: "14",
       slug: "dong-ho-daniel-wellington-dw00500001-nu-pin-day-inox",
       name: "ĐỒNG HỒ DANIEL WELLINGTON DW00500001 NỮ PIN DÂY INOX",
       category: "ĐỒNG HỒ NỮ",
@@ -211,7 +211,7 @@ const data = {
         "Mẫu đồng hồ nữ Daniel Wellington DW00500001 với nét đặc trưng giản dị đến từ thương hiệu Daniel Wellington với thiết kế bộ máy nhỏ gọn thanh mảnh kết hợp cùng mẫu dây đeo chất liệu vải mang phong cách trẻ trung.",
     },
     {
-      _id: "15",
+      //_id: "15",
       slug: "dong-ho-casio-ga-100de-2adr-nu-pin-day-nhua",
       name: "ĐỒNG HỒ CASIO GA-100DE-2ADR NỮ PIN DÂY NHỰA",
       category: "ĐỒNG HỒ NỮ",
@@ -226,7 +226,7 @@ const data = {
         "Mẫu G-Shock GA-100DE-2ADR với vẻ ngoài cá tính thích hợp cho những bạn trẻ năng động, phù hợp cho những chuyến đi phượt ấn tượng với khả năng chịu nước lên đến 20ATM, với đồng hồ điện tử hiện thị đa chức năng tiện ích.",
     },
     {
-      _id: "16",
+      //_id: "16",
       slug: "dong-ho-casio-la670wl-1bdf-nu-pin-day-da",
       name: "ĐỒNG HỒ CASIO LA670WL-1BDF NỮ PIN DÂY DA",
       category: "ĐỒNG HỒ NỮ",
@@ -241,7 +241,7 @@ const data = {
         "Mẫu đồng hồ Casio LA670WL-1BDF  với thiết kế bộ máy nhỏ gọn tạo nên vẻ ngoài thanh mảnh nữ tính, vỏ máy tông màu vàng phối cùng mẫu dây đeo kim loại đen tăng thêm vẻ đẹp thời trang.",
     },
     {
-      _id: "17",
+      //_id: "17",
       slug: "dong-ho-doi-alexandre-christie-ac8c26-1lk-trang-ac8c26-1mk-trang-pin-day-inox",
       name: "ĐỒNG HỒ ĐÔI ALEXANDRE CHRISTIE AC8C26-1LK TRẮNG – AC8C26-1MK TRẮNG PIN DÂY INOX",
       category: "ĐỒNG HỒ ĐÔI",
@@ -256,7 +256,7 @@ const data = {
         "ALEXANDRE CHRISTIE là thương hiệu đồng hồ chính hãng nổi tiếng của Nhật Bản với những thiết kế cầu kỳ và vô cùng tinh tế. Ngay từ khi ra đời mẫu đồng hồ đeo tay này đã nhanh chóng được mọi người yêu thích vì chất lượng tốt động cơ bền bỉ vô cùng sang trọng.",
     },
     {
-      _id: "18",
+      //_id: "18",
       slug: "dong-ho-doi-sunrise-sg-sl1085-1601-pin-day-inox",
       name: "ĐỒNG HỒ ĐÔI SUNRISE SG – SL1085.1601 PIN DÂY INOX",
       category: "ĐỒNG HỒ ĐÔI",
@@ -271,7 +271,7 @@ const data = {
         "Khi mua cặp đồng hồ đôi Sunrise SG.SL1085.1601, quý khách sẽ được bảo hành toàn cầu 1 năm, ngoài ra quý khách sẽ được tặng gói bảo hành máy và thay pin miễn phí trọn đời tại cửa hàng chúng tôi.",
     },
     {
-      _id: "19",
+      //_id: "19",
       slug: "dong-ho-doi-olympia-star-opa58012-07msk-trang-opa58012-07lsk-trang-pin-day-inox",
       name: "ĐỒNG HỒ ĐÔI OLYMPIA STAR OPA58012-07MSK TRẮNG – OPA58012-07LSK TRẮNG PIN DÂY INOX",
       category: "ĐỒNG HỒ ĐÔI",
@@ -286,7 +286,7 @@ const data = {
         "Đồng hồ đôi Olym Pianus (Olympia Star) mặt đồng hồ vàng sang trọng với chất liệu thép không gỉ, dây đeo đờ mi cao cấp, còn có 3 kim chỉ và 1 lịch ngày.",
     },
     {
-      _id: "20",
+      //_id: "20",
       slug: "dong-ho-doi-citizen-bd0030-00a-er0190-00a-pin-day-da",
       name: "ĐỒNG HỒ ĐÔI CITIZEN BD0030-00A – ER0190-00A PIN DÂY DA",
       category: "ĐỒNG HỒ ĐÔI",
@@ -301,7 +301,7 @@ const data = {
         "Đồng hồ đôi Citizen dây da với mặt đồng hồ chữ nhật lớn có nền trắng có nền trắng, dây da cao cấp màu đen có vân, và 3 kim chỉ cao cấp.",
     },
     {
-      _id: "21",
+      //_id: "21",
       slug: "dong-ho-doi-casio-mtp-e312d-7bvdf-ltp-e312d-4bvdf-pin-day-inox",
       name: "ĐỒNG HỒ ĐÔI CASIO MTP-E312D-7BVDF – LTP-E312D-4BVDF PIN DÂY INOX",
       category: "ĐỒNG HỒ ĐÔI",
@@ -316,7 +316,7 @@ const data = {
         "Đồng hồ đôi Casio với phong cách trẻ trung, vạch số được thiết kế mỏng tinh tế kèm theo 3 ô phụ với 3 chức năng tiện ích, vỏ máy cùng với dây đeo kim loại đem lại vẻ chắc chắn bền vững cho cặp đôi.",
     },
     {
-      _id: "22",
+      //_id: "22",
       slug: "dich-vu-khac-laser-logo-cong-ty-len-dong-ho",
       name: "Dịch Vụ Khắc Laser Logo Công Ty Lên Đồng Hồ",
       category: "PHỤ KIỆN",
@@ -331,7 +331,7 @@ const data = {
         "Chiếc đồng hồ sẽ thật sự trở thành một món quà đặc biệt khi được điêu khắc tượng hình những đường họa tiết, logo, dòng chữ kỷ niệm…vv.",
     },
     {
-      _id: "23",
+      //_id: "23",
       slug: "dich-vu-in-logo-mau-len-mat-so-dong-ho",
       name: "Dịch Vụ In Logo Màu Lên Mặt Số Đồng Hồ",
       category: "PHỤ KIỆN",
@@ -346,7 +346,7 @@ const data = {
         "Logo được xem là một biểu trưng cho thương hiệu của một công ty, một tập đoàn mà nó đại diện. Khái quát hơn Logo dùng để thể hiện những đặc trưng hay hình ảnh mà thương hiệu muốn nhắn nhủ đến người xem.",
     },
     {
-      _id: "24",
+      //_id: "24",
       slug: "hop-len-day-cot-tu-dong-zrc-double-watch-winder-em03201",
       name: "HỘP LÊN DÂY CÓT TỰ ĐỘNG ZRC DOUBLE-WATCH WINDER EM03201",
       category: "PHỤ KIỆN",
@@ -361,7 +361,7 @@ const data = {
         "Hộp bảo quản và xoay đồng hồ bọc da tổng hợp màu đen sang trọng. Lắp đựơc 2 đồng hồ tự động với chế độ xoay riêng cho từng cái – 4 chế độ xoay tối ưu.",
     },
     {
-      _id: "25",
+      //_id: "25",
       slug: "san-pham/day-da-zrc-654-tasman",
       name: "DÂY DA ZRC 654 TASMAN",
       category: "PHỤ KIỆN",
@@ -376,7 +376,7 @@ const data = {
         "Dây da 654 là sản phẩm sử dụng da bê mờ, lớp đệm dày, công nghệ sản xuất “French Rembordé”.",
     },
     {
-      _id: "26",
+      //_id: "26",
       slug: "san-pham/hirsch-mariner",
       name: "HIRSCH MARINER",
       category: "PHỤ KIỆN",

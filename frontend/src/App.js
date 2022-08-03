@@ -1,6 +1,8 @@
 import "./App.scss";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Container from "react-bootstrap/esm/Container";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 import DetailProduct from "./pages/DetailProduct/DetailProduct";
 import Home from "./pages/Home/Home";
@@ -13,6 +15,7 @@ function App() {
   return (
     <BrowserRouter>
       <div className="app">
+        <ToastContainer limit={1} className="mt-5" />
         <Header />
         <main>
           <Container className="py-5">

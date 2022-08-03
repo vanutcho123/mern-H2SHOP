@@ -7,6 +7,7 @@ import Home from "./pages/Home/Home";
 import Cart from "./pages/Cart/Cart";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
+import SignIn from "./pages/SignIn/SignIn";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/product/:slug" element={<DetailProduct />} />
               <Route path="/cart" element={<Cart />} />
+              <Route path="/signin" element={<SignIn />} />
             </Routes>
           </Container>
         </main>

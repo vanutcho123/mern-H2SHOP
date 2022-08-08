@@ -46,7 +46,7 @@ const SignIn = () => {
   return (
     <Container className="signIn small-container">
       <Helmet>
-        <title>Sign In</title>
+        <title>Đăng Nhập - H2SHOP</title>
       </Helmet>
       <h1 className="my-3 text-center">Sign In</h1>
       <Form onSubmit={submitHandler}>

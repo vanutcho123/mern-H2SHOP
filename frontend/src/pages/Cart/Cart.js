@@ -38,7 +38,7 @@ const Cart = () => {
   return (
     <div className="cart">
       <Helmet>
-        <title>Shopping Cart</title>
+        <title>Giỏ hàng - H2SHOP</title>
       </Helmet>
       {cartItems.length === 0 ? (
         <Row>

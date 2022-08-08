@@ -10,6 +10,7 @@ import Cart from "./pages/Cart/Cart";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import SignIn from "./pages/SignIn/SignIn";
+import ShippingAddress from "./pages/ShippingAddress/ShippingAddress";
 
 function App() {
   return (
@@ -17,13 +18,14 @@ function App() {
       <div className="app">
         <ToastContainer limit={1} className="mt-5" />
         <Header />
-        <main>
+        <main className="main">
           <Container className="py-5">
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/product/:slug" element={<DetailProduct />} />
               <Route path="/cart" element={<Cart />} />
               <Route path="/signin" element={<SignIn />} />
+              <Route path="/shipping" element={<ShippingAddress />}></Route>
             </Routes>
           </Container>
         </main>

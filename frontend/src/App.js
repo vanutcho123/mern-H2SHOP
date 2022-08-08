@@ -10,6 +10,7 @@ import Cart from "./pages/Cart/Cart";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import SignIn from "./pages/SignIn/SignIn";
+import SignUp from "./pages/SignUp/SignUp";
 import ShippingAddress from "./pages/ShippingAddress/ShippingAddress";
 
 function App() {
@@ -25,6 +26,8 @@ function App() {
               <Route path="/product/:slug" element={<DetailProduct />} />
               <Route path="/cart" element={<Cart />} />
               <Route path="/signin" element={<SignIn />} />
+              <Route path="/signup" element={<SignUp />} />
+
               <Route path="/shipping" element={<ShippingAddress />}></Route>
             </Routes>
           </Container>

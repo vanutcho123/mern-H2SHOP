@@ -9,24 +9,31 @@ import { Store } from "../../Context/Store";
 import { toast } from "react-toastify";
 import { getError } from "../../utils";
 
-import "./SignIn.scss";
+import "./SignUp.scss";
 
-const SignIn = () => {
+const SignUp = () => {
   const navigate = useNavigate();
   const { search } = useLocation();
   const redirectUrl = new URLSearchParams(search).get("redirect");
   const redirect = redirectUrl ? redirectUrl : "/";
 
+  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
 
   const { state, dispatch: ctxDispatch } = useContext(Store);
 
   const { userInfo } = state;
   const submitHandler = async e => {
     e.preventDefault();
+    if (password !== confirmPassword) {
+      toast.error("Mật khẩu không chính xác");
+      return;
+    }
     try {
-      const { data } = await Axios.post("/api/users/signin", {
+      const { data } = await Axios.post("/api/users/signup", {
+        name,
         email,
         password,
       });
@@ -44,12 +51,16 @@ const SignIn = () => {
     }
   }, [navigate, redirect, userInfo]);
   return (
-    <Container className="signIn small-container">
+    <Container className="signUp small-container">
       <Helmet>
-        <title>Đăng Nhập - H2SHOP</title>
+        <title>Đăng Ký - H2SHOP</title>
       </Helmet>
-      <h1 className="my-3 text-center">Đăng Nhập</h1>
+      <h1 className="my-3 text-center">Đăng ký</h1>
       <Form onSubmit={submitHandler}>
+        <Form.Group className="mb-3" controlId="name">
+          <Form.Label>Tên của bạn</Form.Label>
+          <Form.Control required onChange={e => setName(e.target.value)} />
+        </Form.Group>
         <Form.Group className="mb-3" controlId="email">
           <Form.Label>Email</Form.Label>
           <Form.Control
@@ -66,16 +77,24 @@ const SignIn = () => {
             onChange={e => setPassword(e.target.value)}
           />
         </Form.Group>
+        <Form.Group className="mb-3" controlId="confirmPassword">
+          <Form.Label>Xác nhận mật khẩu</Form.Label>
+          <Form.Control
+            type="password"
+            required
+            onChange={e => setConfirmPassword(e.target.value)}
+          />
+        </Form.Group>
         <div className="mb-3">
-          <Button type="submit">Đăng nhập</Button>
+          <Button type="submit">Đăng ký</Button>
         </div>
         <div className="mb-3">
-          Bạn mới biết đến H2Shop?{" "}
-          <Link to={`/signup?redirect=${redirect}`}>Đăng ký tài khoản</Link>
+          Bạn đã có tài khoản?{" "}
+          <Link to={`/signin?redirect=${redirect}`}>Đăng nhập</Link>
         </div>
       </Form>
     </Container>
   );
 };
 
-export default SignIn;
+export default SignUp;

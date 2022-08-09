@@ -65,7 +65,7 @@ const ShippingAddress = () => {
         <title>Thanh Toán</title>
       </Helmet>
       <CheckoutSteps step1 step2></CheckoutSteps>
-      <div className="container small-container shippingAddress">
+      <div className="container small-container shippingAddress py-5">
         <h1 className="my-3 title-global">Thông tin thanh toán</h1>
         <Form onSubmit={submitHandler}>
           <Form.Group className="mb-3" controlId="fullName">
@@ -130,7 +130,7 @@ const ShippingAddress = () => {
 
           <div className="mb-3">
             <Button className="btn-global" type="submit">
-              Continue
+              Tiếp tục
             </Button>
           </div>
         </Form>

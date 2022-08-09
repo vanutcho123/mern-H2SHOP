@@ -31,7 +31,7 @@ const PaymentMethod = () => {
   };
   return (
     <div>
-      <CheckoutSteps step1 step2 step3></CheckoutSteps>
+      <CheckoutSteps step1 step2></CheckoutSteps>
       <div className="container small-container py-5 ">
         <Helmet>
           <title> Phương thức thanh toán</title>

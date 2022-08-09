@@ -13,6 +13,7 @@ import SignIn from "./pages/SignIn/SignIn";
 import SignUp from "./pages/SignUp/SignUp";
 import PaymentMethod from "./pages/PaymentMethod/PaymentMethod";
 import ShippingAddress from "./pages/ShippingAddress/ShippingAddress";
+import PlaceOrder from "./pages/PlaceOrder/PlaceOrder";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
               <Route path="/signup" element={<SignUp />} />
               <Route path="/shipping" element={<ShippingAddress />}></Route>
               <Route path="/payment" element={<PaymentMethod />}></Route>
+              <Route path="/placeorder" element={<PlaceOrder />}></Route>
             </Routes>
           </Container>
         </main>

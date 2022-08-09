@@ -1,0 +1,12 @@
+@use "../../scss/" as *;
+
+.checkout-steps > div {
+  border-bottom: 0.2rem solid #bbb;
+  color: #bbb;
+  font-weight: 500;
+}
+.checkout-steps > div.active {
+  border-bottom: 0.2rem solid $clr-secondary;
+  color: $clr-secondary;
+  font-weight: 500;
+}

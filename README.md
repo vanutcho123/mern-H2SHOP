@@ -102,3 +102,4 @@
     1. Header
     2. SignIn
     3. SignUp
+    4. Shipping address

@@ -86,7 +86,7 @@ const SignUp = () => {
           />
         </Form.Group>
         <div className="mb-3">
-          <Button type="submit" className="signUp_btn">
+          <Button type="submit" className="btn-global">
             Đăng ký
           </Button>
         </div>

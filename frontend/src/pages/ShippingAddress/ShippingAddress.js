@@ -3,9 +3,10 @@ import { Helmet } from "react-helmet-async";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import { useNavigate } from "react-router-dom";
-import { Store } from "../../Context/Store";
 
+import { Store } from "../../Context/Store";
 import CheckoutSteps from "../../components/CheckoutSteps/CheckoutSteps";
+import "./ShippingAddress.scss";
 
 const ShippingAddress = () => {
   const navigate = useNavigate();
@@ -63,13 +64,12 @@ const ShippingAddress = () => {
       <Helmet>
         <title>Thanh Toán</title>
       </Helmet>
-
       <CheckoutSteps step1 step2></CheckoutSteps>
-      <div className="container small-container">
-        <h1 className="my-3">Thanh Toán</h1>
+      <div className="container small-container shippingAddress">
+        <h1 className="my-3 shippingAddress_title">Thông tin thanh toán</h1>
         <Form onSubmit={submitHandler}>
           <Form.Group className="mb-3" controlId="fullName">
-            <Form.Label>Full Name</Form.Label>
+            <Form.Label>Họ và tên</Form.Label>
             <Form.Control
               value={fullName}
               onChange={e => setFullName(e.target.value)}
@@ -77,7 +77,7 @@ const ShippingAddress = () => {
             />
           </Form.Group>
           <Form.Group className="mb-3" controlId="address">
-            <Form.Label>Address</Form.Label>
+            <Form.Label>Địa chỉ</Form.Label>
             <Form.Control
               value={address}
               onChange={e => setAddress(e.target.value)}
@@ -85,7 +85,7 @@ const ShippingAddress = () => {
             />
           </Form.Group>
           <Form.Group className="mb-3" controlId="city">
-            <Form.Label>City</Form.Label>
+            <Form.Label>Thành phố</Form.Label>
             <Form.Control
               value={city}
               onChange={e => setCity(e.target.value)}
@@ -93,7 +93,7 @@ const ShippingAddress = () => {
             />
           </Form.Group>
           <Form.Group className="mb-3" controlId="postalCode">
-            <Form.Label>Postal Code</Form.Label>
+            <Form.Label>Mã bưu điện</Form.Label>
             <Form.Control
               value={postalCode}
               onChange={e => setPostalCode(e.target.value)}
@@ -101,7 +101,7 @@ const ShippingAddress = () => {
             />
           </Form.Group>
           <Form.Group className="mb-3" controlId="country">
-            <Form.Label>Country</Form.Label>
+            <Form.Label>Quốc tịch</Form.Label>
             <Form.Control
               value={country}
               onChange={e => setCountry(e.target.value)}
@@ -114,8 +114,9 @@ const ShippingAddress = () => {
               type="button"
               variant="light"
               onClick={() => navigate("/map")}
+              className="shippingAddress_btn-map"
             >
-              Choose Location On Map
+              Chọn vị trí trên bản đồ
             </Button>
             {shippingAddress.location && shippingAddress.location.lat ? (
               <div>
@@ -123,12 +124,12 @@ const ShippingAddress = () => {
                 LNG:{shippingAddress.location.lng}
               </div>
             ) : (
-              <div>No location</div>
+              <div>Không có vị trí</div>
             )}
           </div>
 
           <div className="mb-3">
-            <Button variant="primary" type="submit">
+            <Button className="btn-global" type="submit">
               Continue
             </Button>
           </div>

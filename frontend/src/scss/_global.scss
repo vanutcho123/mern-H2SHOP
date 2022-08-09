@@ -36,11 +36,31 @@
 .small-container {
   max-width: 50rem;
 }
+
 .checkout-steps > div {
-  border-bottom: 0.2rem solid #a0a0a0;
-  color: #a0a0a0;
+  border-bottom: 0.2rem solid #bbb;
+  color: #bbb;
 }
 .checkout-steps > div.active {
-  border-bottom: 0.2rem solid #f08000;
-  color: #f08000;
+  border-bottom: 0.2rem solid #e2ba48;
+  color: #e2ba48;
+}
+.btn-global {
+  padding: 1.5rem;
+  color: #000;
+  background-color: #e2ba48 !important;
+  border: none;
+  outline: none;
+  width: 100%;
+  margin: 1.3rem 0;
+
+  font-size: 1.7rem;
+  line-height: 1.7rem;
+  letter-spacing: 0.1rem;
+  text-transform: capitalize;
+  font-weight: bold;
+  &:hover {
+    opacity: 0.8;
+    color: #000;
+  }
 }

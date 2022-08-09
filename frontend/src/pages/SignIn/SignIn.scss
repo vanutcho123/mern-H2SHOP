@@ -14,19 +14,8 @@
     color: $clr-primary;
   }
   .form-control {
-    padding: 1rem !important;
+    padding: 0.7rem !important;
     font-size: 1.5rem;
     color: $clr-primary !important;
-  }
-  &_btn {
-    padding: 1rem;
-    color: $clr-primary;
-    background-color: $clr-secondary !important;
-    border: none;
-    outline: none;
-    width: 100%;
-    font-size: 1.7rem;
-    font-weight: bold;
-    margin: 1rem 0;
   }
 }

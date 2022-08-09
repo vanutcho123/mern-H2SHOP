@@ -25,6 +25,10 @@ const SignIn = () => {
   const { userInfo } = state;
   const submitHandler = async e => {
     e.preventDefault();
+    if (!password) {
+      toast.error("Email hoặc mật khẩu không chính xác!");
+      return;
+    }
     try {
       const { data } = await Axios.post("/api/users/signin", {
         email,
@@ -67,7 +71,7 @@ const SignIn = () => {
           />
         </Form.Group>
         <div className="mb-3">
-          <Button type="submit" className="signIn_btn">
+          <Button type="submit" className="btn-global">
             Đăng nhập
           </Button>
         </div>

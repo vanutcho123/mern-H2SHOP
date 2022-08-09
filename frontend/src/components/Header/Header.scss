@@ -1,5 +1,49 @@
 @use "../../scss/" as *;
+header {
+  .navbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
 
-.navbar-brand {
-  font-size: 20px;
+    &-brand {
+      font-size: 35px;
+      font-weight: 900;
+      transition: $transition-all;
+    }
+  }
+  .nav-link {
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 1;
+    color: $clr-gray;
+    margin: 0 0.2rem;
+    &:hover {
+      color: $clr-secondary;
+    }
+  }
+  .dropdown-item {
+    font-size: 1.5rem;
+    font-weight: 400;
+    &:hover {
+      color: $clr-secondary !important;
+    }
+  }
+}
+
+.navbar.sticky {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  animation: topIn ease 0.8s, fadeIn ease 0.5s;
+  background: $clr-primary;
+  .nav-link {
+    color: $clr-white;
+    &:hover {
+      color: $clr-secondary;
+    }
+  }
+  .navbar-brand {
+    font-size: 30px;
+  }
 }

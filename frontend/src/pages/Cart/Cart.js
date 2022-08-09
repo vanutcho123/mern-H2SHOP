@@ -124,13 +124,13 @@ const Cart = () => {
               <tbody>
                 <tr>
                   <th className="fw-normal">Số lượng sản phẩm: </th>
-                  <th className="text-right">
+                  <th className="text-end">
                     {cartItems.reduce((a, c) => a + c.quantity, 0)}
                   </th>
                 </tr>
                 <tr>
                   <th className="fw-normal">Tổng cộng: </th>
-                  <th className="text-right">
+                  <th className="text-end">
                     {"$"}
                     {cartItems.reduce(
                       (a, c) => a + c.currentPrice * c.quantity,
@@ -141,7 +141,7 @@ const Cart = () => {
                 <tr>
                   <th className="fw-normal">Giao hàng</th>
                   <th>
-                    <div className="d-flex flex-column fw-normal text-right">
+                    <div className="d-flex flex-column fw-normal text-end">
                       <span>Giao hàng miễn phí</span>
                       <span>Tính phí giao hàng</span>
                     </div>

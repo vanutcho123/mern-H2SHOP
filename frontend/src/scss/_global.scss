@@ -1,3 +1,4 @@
+// Animation
 @keyframes opacity {
   from {
     opacity: 0;
@@ -14,17 +15,26 @@
     transform: translateX(0);
   }
 }
+@keyframes topIn {
+  from {
+    top: -50%;
+  }
+  to {
+    top: 0;
+  }
+}
 
+// -----------------
 .divider {
-  height: 3px;
+  height: 0.3rem;
   display: block;
   background-color: rgba(0, 0, 0, 0.1);
   margin: 1em 0 1em;
   width: 100%;
-  max-width: 30px;
+  max-width: 3rem;
 }
 .small-container {
-  max-width: 600px;
+  max-width: 50rem;
 }
 .checkout-steps > div {
   border-bottom: 0.2rem solid #a0a0a0;

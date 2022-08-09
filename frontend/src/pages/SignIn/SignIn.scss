@@ -1,4 +1,32 @@
 @use "../../scss/" as *;
 
 .signIn {
+  &_title {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: $clr-primary;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+  }
+  .form-label {
+    font-size: 1.7rem;
+    font-weight: 500;
+    color: $clr-primary;
+  }
+  .form-control {
+    padding: 1rem !important;
+    font-size: 1.5rem;
+    color: $clr-primary !important;
+  }
+  &_btn {
+    padding: 1rem;
+    color: $clr-primary;
+    background-color: $clr-secondary !important;
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 1.7rem;
+    font-weight: bold;
+    margin: 1rem 0;
+  }
 }

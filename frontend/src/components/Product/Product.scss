@@ -92,7 +92,7 @@
     border-radius: 100rem;
     cursor: none;
     pointer-events: none;
-    z-index: 1000;
+    z-index: 999;
   }
   &_countInStock {
     position: absolute;
@@ -102,7 +102,7 @@
     right: 0;
     text-align: center;
     color: $clr-text-primary;
-    z-index: 1000;
+    z-index: 999;
     text-transform: uppercase;
     padding: 2rem 0;
     font-size: 1.6rem;
@@ -117,7 +117,7 @@
     position: absolute;
     bottom: 40%;
     left: 1rem;
-    z-index: 1000;
+    z-index: 999;
     visibility: hidden;
 
     i {

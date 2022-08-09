@@ -1,0 +1,29 @@
+@use "../../scss/" as *;
+
+.scroll-to-top {
+  position: fixed;
+  z-index: 999;
+  bottom: 4rem;
+  right: 2rem;
+
+  font-size: 2rem;
+  width: 4.5rem;
+  height: 4.5rem;
+  line-height: 4.5rem;
+  color: $clr-primary;
+  background: $clr-white;
+  border: 1px solid $clr-primary;
+  text-align: center;
+  border-radius: 100rem;
+  transition: all ease 0.3s;
+  visibility: hidden;
+  cursor: pointer;
+  &:hover {
+    background: $clr-primary;
+    color: $clr-white;
+  }
+}
+.scroll-to-top.show {
+  visibility: visible;
+  animation: botToTop 0.3s linear, opacity 0.3s linear;
+}

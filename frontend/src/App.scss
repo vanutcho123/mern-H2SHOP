@@ -9,12 +9,14 @@
 }
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 body {
   font-family: $font-family;
   font-size: 1.6rem;
   line-height: 1.5;
   text-rendering: optimizeSpeed;
+  scroll-behavior: smooth;
 }
 .app {
   width: 100%;
@@ -27,4 +29,7 @@ body {
 .main {
   position: relative;
   min-height: 70vh;
+}
+.mt-70 {
+  margin-top: 7rem !important;
 }

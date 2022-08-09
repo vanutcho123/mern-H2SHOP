@@ -48,7 +48,7 @@ const SignIn = () => {
       <Helmet>
         <title>Đăng Nhập - H2SHOP</title>
       </Helmet>
-      <h1 className="my-3 text-center">Đăng Nhập</h1>
+      <h1 className="my-3 text-center signIn_title">Đăng Nhập</h1>
       <Form onSubmit={submitHandler}>
         <Form.Group className="mb-3" controlId="email">
           <Form.Label>Email</Form.Label>
@@ -67,7 +67,9 @@ const SignIn = () => {
           />
         </Form.Group>
         <div className="mb-3">
-          <Button type="submit">Đăng nhập</Button>
+          <Button type="submit" className="signIn_btn">
+            Đăng nhập
+          </Button>
         </div>
         <div className="mb-3">
           Bạn mới biết đến H2Shop?{" "}

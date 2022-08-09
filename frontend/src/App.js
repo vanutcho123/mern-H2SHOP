@@ -12,15 +12,17 @@ import Footer from "./components/Footer/Footer";
 import SignIn from "./pages/SignIn/SignIn";
 import SignUp from "./pages/SignUp/SignUp";
 import ShippingAddress from "./pages/ShippingAddress/ShippingAddress";
+import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 
 function App() {
   return (
     <BrowserRouter>
       <div className="app">
         <ToastContainer limit={1} className="mt-5" />
+        <ScrollToTop />
         <Header />
         <main className="main">
-          <Container className="py-5">
+          <Container className="mt-70 py-5">
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/product/:slug" element={<DetailProduct />} />

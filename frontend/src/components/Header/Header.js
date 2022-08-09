@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Header.scss";
 import Navbar from "react-bootstrap/Navbar";
 import Container from "react-bootstrap/Container";
@@ -13,6 +13,14 @@ import { Link } from "react-router-dom";
 const Header = () => {
   const { state, dispatch: ctxDispatch } = useContext(Store);
   const { cart, userInfo } = state;
+  const [navbar, setNavbar] = useState(false);
+
+  const sticky = () => {
+    const navbar = document.querySelector(".navbar");
+    const navHeight = navbar.getBoundingClientRect().height;
+    window.scrollY > navHeight ? setNavbar(true) : setNavbar(false);
+  };
+  window.addEventListener("scroll", sticky);
 
   const signoutHandler = () => {
     ctxDispatch({ type: "USER_SIGNOUT" });
@@ -22,51 +30,54 @@ const Header = () => {
   };
   return (
     <header>
-      <Navbar collapseOnSelect expand="lg" bg="black" variant="dark">
+      <Navbar
+        collapseOnSelect
+        expand="lg"
+        bg="black"
+        variant="dark"
+        className={navbar ? "navbar sticky py-3" : "navbar py-2"}
+      >
         <Container>
           <LinkContainer to="/">
             <Navbar.Brand>H2SHOP</Navbar.Brand>
           </LinkContainer>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
-            <Nav className="me-auto">
-              <Nav.Link href="#features">Giới thiệu</Nav.Link>
-              <Nav.Link href="#features">Đồng hồ nam</Nav.Link>
-              <Nav.Link href="#features">Đồng hồ nữ</Nav.Link>
-              <Nav.Link href="#features">Đồng hồ đôi</Nav.Link>
-              <NavDropdown title="PHỤ KIỆN" id="collasible-nav-dropdown">
-                <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.2">
-                  Another action
-                </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">
-                  Something
-                </NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="#action/3.4">
-                  Separated link
-                </NavDropdown.Item>
+            <Nav className="mx-auto text-capitalize">
+              <Nav.Link>Giới thiệu</Nav.Link>
+              <Nav.Link>Đồng hồ nam</Nav.Link>
+              <Nav.Link>Đồng hồ nữ</Nav.Link>
+              <Nav.Link>Đồng hồ đôi</Nav.Link>
+              <NavDropdown title="Phụ Kiện" id="collasible-nav-dropdown">
+                <NavDropdown.Item>Dây da</NavDropdown.Item>
+                <NavDropdown.Item>Hộp đồng hồ</NavDropdown.Item>
+                <NavDropdown.Item>Dịch vụ in logo lên đồng hồ</NavDropdown.Item>
+                <NavDropdown.Item>Khắc laser lên đồng hồ</NavDropdown.Item>
               </NavDropdown>
               <Nav.Link href="#features">Tin tức</Nav.Link>
 
               <Nav.Link href="#pricing">Liên hệ</Nav.Link>
             </Nav>
-            <Nav className="me-auto">
+            <Nav>
               <Link to="/cart" className="nav-link">
-                Cart
-                {cart.cartItems.length > 0 && (
+                Giỏ hàng
+                {cart.cartItems.length > 0 ? (
                   <Badge pill bg="danger">
                     {cart.cartItems.reduce((a, c) => a + c.quantity, 0)}
+                  </Badge>
+                ) : (
+                  <Badge pill bg="danger">
+                    0
                   </Badge>
                 )}
               </Link>
               {userInfo ? (
                 <NavDropdown title={userInfo.name} id="basic-nav-dropdown">
                   <LinkContainer to="/profile">
-                    <NavDropdown.Item>User Profile</NavDropdown.Item>
+                    <NavDropdown.Item>Thông tin cá nhân</NavDropdown.Item>
                   </LinkContainer>
                   <LinkContainer to="/orderhistory">
-                    <NavDropdown.Item>Order History</NavDropdown.Item>
+                    <NavDropdown.Item>Lịch sử mua hàng</NavDropdown.Item>
                   </LinkContainer>
                   <NavDropdown.Divider />
                   <Link
@@ -74,12 +85,12 @@ const Header = () => {
                     to="#signout"
                     onClick={signoutHandler}
                   >
-                    Sign Out
+                    Đăng xuất
                   </Link>
                 </NavDropdown>
               ) : (
-                <Link className="nav-link" to="/signin">
-                  Sign In
+                <Link className="nav-link ms-2" to="/signin">
+                  Đăng nhập
                 </Link>
               )}
             </Nav>

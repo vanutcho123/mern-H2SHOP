@@ -1,0 +1,11 @@
+@use "../../scss/" as *;
+
+.paymentMethod {
+  &_btn {
+    padding: 0.7rem 1rem;
+    font-size: 1.5rem;
+    background: $clr-secondary;
+    border: none;
+    outline: none;
+  }
+}

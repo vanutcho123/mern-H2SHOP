@@ -55,7 +55,7 @@ const SignUp = () => {
       <Helmet>
         <title>Đăng Ký - H2SHOP</title>
       </Helmet>
-      <h1 className="my-3 text-center signUp_title">Đăng ký</h1>
+      <h1 className="my-3 title-global">Đăng ký</h1>
       <Form onSubmit={submitHandler}>
         <Form.Group className="mb-3" controlId="name">
           <Form.Label>Tên của bạn</Form.Label>

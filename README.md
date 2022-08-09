@@ -103,3 +103,6 @@
     2. SignIn
     3. SignUp
     4. Shipping address
+24. Implement Select Payment Method
+    1. Create input forms
+    2. Handle Submit

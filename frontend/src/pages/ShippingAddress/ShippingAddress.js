@@ -66,7 +66,7 @@ const ShippingAddress = () => {
       </Helmet>
       <CheckoutSteps step1 step2></CheckoutSteps>
       <div className="container small-container shippingAddress">
-        <h1 className="my-3 shippingAddress_title">Thông tin thanh toán</h1>
+        <h1 className="my-3 title-global">Thông tin thanh toán</h1>
         <Form onSubmit={submitHandler}>
           <Form.Group className="mb-3" controlId="fullName">
             <Form.Label>Họ và tên</Form.Label>
@@ -114,7 +114,7 @@ const ShippingAddress = () => {
               type="button"
               variant="light"
               onClick={() => navigate("/map")}
-              className="shippingAddress_btn-map"
+              className="shippingAddress_btn"
             >
               Chọn vị trí trên bản đồ
             </Button>

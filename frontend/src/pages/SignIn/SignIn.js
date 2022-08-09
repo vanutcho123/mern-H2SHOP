@@ -52,7 +52,7 @@ const SignIn = () => {
       <Helmet>
         <title>Đăng Nhập - H2SHOP</title>
       </Helmet>
-      <h1 className="my-3 text-center signIn_title">Đăng Nhập</h1>
+      <h1 className="my-3 title-global">Đăng Nhập</h1>
       <Form onSubmit={submitHandler}>
         <Form.Group className="mb-3" controlId="email">
           <Form.Label>Email</Form.Label>

@@ -11,6 +11,7 @@ import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import SignIn from "./pages/SignIn/SignIn";
 import SignUp from "./pages/SignUp/SignUp";
+import PaymentMethod from "./pages/PaymentMethod/PaymentMethod";
 import ShippingAddress from "./pages/ShippingAddress/ShippingAddress";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 
@@ -29,8 +30,8 @@ function App() {
               <Route path="/cart" element={<Cart />} />
               <Route path="/signin" element={<SignIn />} />
               <Route path="/signup" element={<SignUp />} />
-
               <Route path="/shipping" element={<ShippingAddress />}></Route>
+              <Route path="/payment" element={<PaymentMethod />}></Route>
             </Routes>
           </Container>
         </main>

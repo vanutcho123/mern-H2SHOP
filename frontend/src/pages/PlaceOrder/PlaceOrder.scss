@@ -1,0 +1,38 @@
+@use "../../scss/" as *;
+
+.placeOrder {
+  &_title {
+    text-transform: capitalize;
+  }
+  .card-title {
+    font-size: 1.8rem;
+    color: $clr-secondary;
+    font-weight: bold;
+    text-transform: capitalize;
+  }
+  &_edit {
+    display: inline-block;
+    text-decoration: none;
+    padding: 0.3rem;
+    background: $clr-white;
+    color: $clr-primary;
+    border: 1px solid $clr-primary;
+    border-radius: 0.5rem;
+    margin-top: 0.5rem;
+    &:hover {
+      color: $clr-white;
+      background: $clr-primary;
+    }
+  }
+  &_product {
+    @include flex(row, center, space-between);
+    &-img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+    }
+    &-name {
+      font-size: 1.4rem;
+    }
+  }
+}

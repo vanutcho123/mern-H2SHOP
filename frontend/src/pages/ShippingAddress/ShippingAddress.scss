@@ -12,17 +12,4 @@
     color: $clr-primary !important;
     outline: none;
   }
-  &_btn {
-    padding: 1rem;
-    background: $clr-gray;
-    margin: 1.3rem 0;
-
-    font-size: 1.4rem;
-    text-transform: capitalize;
-    font-weight: bold;
-    &:hover {
-      opacity: 0.8;
-      color: $clr-primary;
-    }
-  }
 }

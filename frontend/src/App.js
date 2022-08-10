@@ -14,6 +14,7 @@ import SignUp from "./pages/SignUp/SignUp";
 import PaymentMethod from "./pages/PaymentMethod/PaymentMethod";
 import ShippingAddress from "./pages/ShippingAddress/ShippingAddress";
 import PlaceOrder from "./pages/PlaceOrder/PlaceOrder";
+import Order from "./pages/Order/Order";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
               <Route path="/shipping" element={<ShippingAddress />}></Route>
               <Route path="/payment" element={<PaymentMethod />}></Route>
               <Route path="/placeorder" element={<PlaceOrder />}></Route>
+              <Route path="/order/:id" element={<Order />}></Route>
             </Routes>
           </Container>
         </main>

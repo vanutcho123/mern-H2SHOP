@@ -108,25 +108,6 @@ const ShippingAddress = () => {
               required
             />
           </Form.Group>
-          <div className="mb-3">
-            <Button
-              id="chooseOnMap"
-              type="button"
-              variant="light"
-              onClick={() => navigate("/map")}
-              className="shippingAddress_btn"
-            >
-              Chọn vị trí trên bản đồ
-            </Button>
-            {shippingAddress.location && shippingAddress.location.lat ? (
-              <div>
-                LAT: {shippingAddress.location.lat}
-                LNG:{shippingAddress.location.lng}
-              </div>
-            ) : (
-              <div>Không có vị trí</div>
-            )}
-          </div>
 
           <div className="mb-3">
             <Button className="btn-global" type="submit">

@@ -55,9 +55,9 @@ const Header = () => {
                 <NavDropdown.Item>Dịch vụ in logo lên đồng hồ</NavDropdown.Item>
                 <NavDropdown.Item>Khắc laser lên đồng hồ</NavDropdown.Item>
               </NavDropdown>
-              <Nav.Link href="#features">Tin tức</Nav.Link>
+              <Nav.Link>Tin tức</Nav.Link>
 
-              <Nav.Link href="#pricing">Liên hệ</Nav.Link>
+              <Nav.Link>Liên hệ</Nav.Link>
             </Nav>
             <Nav>
               <Link to="/cart" className="nav-link">

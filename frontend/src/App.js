@@ -17,6 +17,7 @@ import PlaceOrder from "./pages/PlaceOrder/PlaceOrder";
 import Order from "./pages/Order/Order";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 import OrderHistory from "./pages/OrderHistory/OrderHistory";
+import Profile from "./pages/Profile/Profile";
 
 function App() {
   return (
@@ -38,6 +39,7 @@ function App() {
               <Route path="/placeorder" element={<PlaceOrder />}></Route>
               <Route path="/order/:id" element={<Order />}></Route>
               <Route path="/orderhistory" element={<OrderHistory />}></Route>
+              <Route path="/profile" element={<Profile />}></Route>
             </Routes>
           </Container>
         </main>

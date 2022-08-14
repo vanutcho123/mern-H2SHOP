@@ -51,51 +51,53 @@ const SignUp = () => {
     }
   }, [navigate, redirect, userInfo]);
   return (
-    <Container className="signUp small-container">
-      <Helmet>
-        <title>Đăng Ký - H2SHOP</title>
-      </Helmet>
-      <h1 className="my-3 title-global">Đăng ký</h1>
-      <Form onSubmit={submitHandler}>
-        <Form.Group className="mb-3" controlId="name">
-          <Form.Label>Tên của bạn</Form.Label>
-          <Form.Control required onChange={e => setName(e.target.value)} />
-        </Form.Group>
-        <Form.Group className="mb-3" controlId="email">
-          <Form.Label>Email</Form.Label>
-          <Form.Control
-            type="email"
-            required
-            onChange={e => setEmail(e.target.value)}
-          />
-        </Form.Group>
-        <Form.Group className="mb-3" controlId="password">
-          <Form.Label>Mật khẩu</Form.Label>
-          <Form.Control
-            type="password"
-            required
-            onChange={e => setPassword(e.target.value)}
-          />
-        </Form.Group>
-        <Form.Group className="mb-3" controlId="confirmPassword">
-          <Form.Label>Xác nhận mật khẩu</Form.Label>
-          <Form.Control
-            type="password"
-            required
-            onChange={e => setConfirmPassword(e.target.value)}
-          />
-        </Form.Group>
-        <div className="mb-3">
-          <Button type="submit" className="btn-global">
-            Đăng ký
-          </Button>
-        </div>
-        <div className="mb-3">
-          Bạn đã có tài khoản?{" "}
-          <Link to={`/signin?redirect=${redirect}`}>Đăng nhập</Link>
-        </div>
-      </Form>
-    </Container>
+    <div className="signUp">
+      <Container className="small-container py-5 mt-70">
+        <Helmet>
+          <title>Đăng Ký - H2SHOP</title>
+        </Helmet>
+        <h1 className="my-3 title-global">Đăng ký</h1>
+        <Form onSubmit={submitHandler}>
+          <Form.Group className="mb-3" controlId="name">
+            <Form.Label>Tên của bạn</Form.Label>
+            <Form.Control required onChange={e => setName(e.target.value)} />
+          </Form.Group>
+          <Form.Group className="mb-3" controlId="email">
+            <Form.Label>Email</Form.Label>
+            <Form.Control
+              type="email"
+              required
+              onChange={e => setEmail(e.target.value)}
+            />
+          </Form.Group>
+          <Form.Group className="mb-3" controlId="password">
+            <Form.Label>Mật khẩu</Form.Label>
+            <Form.Control
+              type="password"
+              required
+              onChange={e => setPassword(e.target.value)}
+            />
+          </Form.Group>
+          <Form.Group className="mb-3" controlId="confirmPassword">
+            <Form.Label>Xác nhận mật khẩu</Form.Label>
+            <Form.Control
+              type="password"
+              required
+              onChange={e => setConfirmPassword(e.target.value)}
+            />
+          </Form.Group>
+          <div className="mb-3">
+            <Button type="submit" className="btn-global">
+              Đăng ký
+            </Button>
+          </div>
+          <div className="mb-3">
+            Bạn đã có tài khoản?{" "}
+            <Link to={`/signin?redirect=${redirect}`}>Đăng nhập</Link>
+          </div>
+        </Form>
+      </Container>
+    </div>
   );
 };
 

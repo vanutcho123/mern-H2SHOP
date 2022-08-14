@@ -48,39 +48,41 @@ const SignIn = () => {
     }
   }, [navigate, redirect, userInfo]);
   return (
-    <Container className="signIn small-container">
-      <Helmet>
-        <title>Đăng Nhập - H2SHOP</title>
-      </Helmet>
-      <h1 className="my-3 title-global">Đăng Nhập</h1>
-      <Form onSubmit={submitHandler}>
-        <Form.Group className="mb-3" controlId="email">
-          <Form.Label>Email</Form.Label>
-          <Form.Control
-            type="email"
-            required
-            onChange={e => setEmail(e.target.value)}
-          />
-        </Form.Group>
-        <Form.Group className="mb-3" controlId="password">
-          <Form.Label>Mật khẩu</Form.Label>
-          <Form.Control
-            type="password"
-            required
-            onChange={e => setPassword(e.target.value)}
-          />
-        </Form.Group>
-        <div className="mb-3">
-          <Button type="submit" className="btn-global">
-            Đăng nhập
-          </Button>
-        </div>
-        <div className="mb-3">
-          Bạn mới biết đến H2Shop?{" "}
-          <Link to={`/signup?redirect=${redirect}`}>Đăng ký tài khoản</Link>
-        </div>
-      </Form>
-    </Container>
+    <div className="signIn">
+      <Container className="small-container mt-70 py-5">
+        <Helmet>
+          <title>Đăng Nhập - H2SHOP</title>
+        </Helmet>
+        <h1 className="my-3 title-global">Đăng Nhập</h1>
+        <Form onSubmit={submitHandler}>
+          <Form.Group className="mb-3" controlId="email">
+            <Form.Label>Email</Form.Label>
+            <Form.Control
+              type="email"
+              required
+              onChange={e => setEmail(e.target.value)}
+            />
+          </Form.Group>
+          <Form.Group className="mb-3" controlId="password">
+            <Form.Label>Mật khẩu</Form.Label>
+            <Form.Control
+              type="password"
+              required
+              onChange={e => setPassword(e.target.value)}
+            />
+          </Form.Group>
+          <div className="mb-3">
+            <Button type="submit" className="btn-global">
+              Đăng nhập
+            </Button>
+          </div>
+          <div className="mb-3">
+            Bạn mới biết đến H2Shop?{" "}
+            <Link to={`/signup?redirect=${redirect}`}>Đăng ký tài khoản</Link>
+          </div>
+        </Form>
+      </Container>
+    </div>
   );
 };
 

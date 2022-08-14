@@ -7,6 +7,7 @@ import { useNavigate } from "react-router-dom";
 import { Store } from "../../Context/Store";
 import CheckoutSteps from "../../components/CheckoutSteps/CheckoutSteps";
 import "./ShippingAddress.scss";
+import Container from "react-bootstrap/esm/Container";
 
 const ShippingAddress = () => {
   const navigate = useNavigate();
@@ -60,62 +61,64 @@ const ShippingAddress = () => {
   }, [ctxDispatch, fullBox]);
 
   return (
-    <div>
+    <div className="shippingAddress ">
       <Helmet>
-        <title>Thanh Toán</title>
+        <title>Thông tin thanh toán - H2SHOP</title>
       </Helmet>
-      <CheckoutSteps step1 step2></CheckoutSteps>
-      <div className="container small-container shippingAddress py-5">
-        <h1 className="my-3 title-global">Thông tin thanh toán</h1>
-        <Form onSubmit={submitHandler}>
-          <Form.Group className="mb-3" controlId="fullName">
-            <Form.Label>Họ và tên</Form.Label>
-            <Form.Control
-              value={fullName}
-              onChange={e => setFullName(e.target.value)}
-              required
-            />
-          </Form.Group>
-          <Form.Group className="mb-3" controlId="address">
-            <Form.Label>Địa chỉ</Form.Label>
-            <Form.Control
-              value={address}
-              onChange={e => setAddress(e.target.value)}
-              required
-            />
-          </Form.Group>
-          <Form.Group className="mb-3" controlId="city">
-            <Form.Label>Thành phố</Form.Label>
-            <Form.Control
-              value={city}
-              onChange={e => setCity(e.target.value)}
-              required
-            />
-          </Form.Group>
-          <Form.Group className="mb-3" controlId="postalCode">
-            <Form.Label>Mã bưu điện</Form.Label>
-            <Form.Control
-              value={postalCode}
-              onChange={e => setPostalCode(e.target.value)}
-              required
-            />
-          </Form.Group>
-          <Form.Group className="mb-3" controlId="country">
-            <Form.Label>Quốc tịch</Form.Label>
-            <Form.Control
-              value={country}
-              onChange={e => setCountry(e.target.value)}
-              required
-            />
-          </Form.Group>
+      <Container className="mt-70 py-5">
+        <CheckoutSteps step1 step2></CheckoutSteps>
+        <div className="small-container mx-auto py-5">
+          <h1 className="my-3 title-global">Thông tin thanh toán</h1>
+          <Form onSubmit={submitHandler}>
+            <Form.Group className="mb-3" controlId="fullName">
+              <Form.Label>Họ và tên</Form.Label>
+              <Form.Control
+                value={fullName}
+                onChange={e => setFullName(e.target.value)}
+                required
+              />
+            </Form.Group>
+            <Form.Group className="mb-3" controlId="address">
+              <Form.Label>Địa chỉ</Form.Label>
+              <Form.Control
+                value={address}
+                onChange={e => setAddress(e.target.value)}
+                required
+              />
+            </Form.Group>
+            <Form.Group className="mb-3" controlId="city">
+              <Form.Label>Thành phố</Form.Label>
+              <Form.Control
+                value={city}
+                onChange={e => setCity(e.target.value)}
+                required
+              />
+            </Form.Group>
+            <Form.Group className="mb-3" controlId="postalCode">
+              <Form.Label>Mã bưu điện</Form.Label>
+              <Form.Control
+                value={postalCode}
+                onChange={e => setPostalCode(e.target.value)}
+                required
+              />
+            </Form.Group>
+            <Form.Group className="mb-3" controlId="country">
+              <Form.Label>Quốc tịch</Form.Label>
+              <Form.Control
+                value={country}
+                onChange={e => setCountry(e.target.value)}
+                required
+              />
+            </Form.Group>
 
-          <div className="mb-3">
-            <Button className="btn-global" type="submit">
-              Tiếp tục
-            </Button>
-          </div>
-        </Form>
-      </div>
+            <div className="mb-3">
+              <Button className="btn-global" type="submit">
+                Tiếp tục
+              </Button>
+            </div>
+          </Form>
+        </div>
+      </Container>
     </div>
   );
 };

@@ -1,6 +1,7 @@
 @use "../../scss/" as *;
 header {
   .navbar {
+    background: $clr-primary;
     position: fixed;
     top: 0;
     right: 0;

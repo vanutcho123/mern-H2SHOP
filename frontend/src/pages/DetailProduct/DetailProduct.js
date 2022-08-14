@@ -6,6 +6,7 @@ import Col from "react-bootstrap/Col";
 import { Helmet } from "react-helmet-async";
 import Button from "react-bootstrap/esm/Button";
 import { Link } from "react-router-dom";
+import Container from "react-bootstrap/esm/Container";
 
 import "./DetailProduct.scss";
 import Rating from "../../components/Rating/Rating";
@@ -14,6 +15,7 @@ import MessageBox from "../../components/MessageBox/MessageBox";
 import { getError } from "../../utils";
 import { Store } from "../../Context/Store";
 import Sidebar from "../../components/Sidebar/Sidebar";
+import SimilarProduct from "../../components/SimilarProduct/SimilarProduct";
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -68,79 +70,92 @@ const DetailProduct = () => {
     navigate("/cart");
   };
 
-  return loading ? (
-    <LoadingBox />
-  ) : error ? (
-    <MessageBox variant="danger">{error}</MessageBox>
-  ) : (
+  return (
     <div className="detailProduct">
       <Helmet>
         <title>{product.name}</title>
       </Helmet>
-      <Row>
-        <Col md={3}>
-          <Sidebar product={product} />
-        </Col>
-        <Col md={9}>
+      <Container className="mt-70">
+        {loading ? (
+          <LoadingBox />
+        ) : error ? (
+          <MessageBox variant="danger">{error}</MessageBox>
+        ) : (
           <Row>
-            <Col md="7" className="position-relative overflow-hidden">
-              <div className="detailProduct_img">
-                <img src={product.image} alt={product.name} />
-              </div>
-              <div>
-                {product.sale > 0 && (
-                  <span className="detailProduct_sale">-{product.sale}%</span>
-                )}
-              </div>
-              <div className="detailProduct_zoom">
-                <i className="fa-solid fa-up-right-and-down-left-from-center"></i>
-              </div>
+            <Col md={3}>
+              <Sidebar />
             </Col>
-            <Col md="5">
-              <div className="detailProduct_info">
-                <nav>
-                  <Link to="/" className="text-decoration-none">
-                    Trang chủ
-                  </Link>
-                  <span>/</span>
-                  <div>{product.category}</div>
-                </nav>
-                <h2 className="detailProduct_name">{product.name}</h2>
-                <span className="divider"></span>
-                <div className="d-flex fs-2 gap-4 my-3">
-                  <span className="text-decoration-line-through">
-                    ${product.initialPrice}
-                  </span>
-                  <span className="fw-bold">${product.currentPrice}</span>
-                </div>
-                <Rating
-                  numReviews={product.numReviews}
-                  rating={product.rating}
-                />
-                <p className="mb-4">{product.description}</p>
-                <div className="mb-4"></div>
-                {product.countInStock > 0 ? (
-                  <div className="mb-5">
-                    <Button
-                      onClick={addToCartHandler}
-                      className="btn btn-primary add-to-cart"
-                    >
-                      THÊM VÀO GIỎ
-                    </Button>
+            <Col md={9} className="overflow-hidden">
+              <Row className="border-bottom border-1 border-secondary">
+                <Col
+                  md="7"
+                  className="position-relative overflow-hidden px-4 pb-5"
+                >
+                  <div className="detailProduct_img">
+                    <img src={product.image} alt={product.name} />
                   </div>
-                ) : (
-                  <p className="fw-bold fs-4 mb-4">
-                    Sản phẩm này đã hết hàng hoặc không có sẵn.
-                  </p>
-                )}
-                <div className="detailProduct_code">
-                  Mã: <span className="fw-bold">{product._id}</span>
-                </div>
-              </div>
+                  <div>
+                    {product.sale > 0 && (
+                      <span className="detailProduct_sale">
+                        -{product.sale}%
+                      </span>
+                    )}
+                  </div>
+                  <div className="detailProduct_zoom">
+                    <i className="fa-solid fa-up-right-and-down-left-from-center"></i>
+                  </div>
+                </Col>
+                <Col
+                  md="5"
+                  className="position-relative overflow-hidden px-4 pb-5"
+                >
+                  <div className="detailProduct_info">
+                    <nav>
+                      <Link to="/" className="text-decoration-none">
+                        Trang chủ
+                      </Link>
+                      <span>/</span>
+                      <div>{product.category}</div>
+                    </nav>
+                    <h2 className="detailProduct_name">{product.name}</h2>
+                    <span className="divider"></span>
+                    <div className="d-flex fs-2 gap-4 my-3">
+                      <span className="text-decoration-line-through">
+                        ${product.initialPrice}
+                      </span>
+                      <span className="fw-bold">${product.currentPrice}</span>
+                    </div>
+                    <Rating
+                      numReviews={product.numReviews}
+                      rating={product.rating}
+                    />
+                    <p className="mb-4">{product.description}</p>
+                    <div className="mb-4"></div>
+                    {product.countInStock > 0 ? (
+                      <div className="mb-5">
+                        <Button
+                          onClick={addToCartHandler}
+                          className="btn btn-primary add-to-cart"
+                        >
+                          THÊM VÀO GIỎ
+                        </Button>
+                      </div>
+                    ) : (
+                      <p className="fw-bold fs-4 mb-4">
+                        Sản phẩm này đã hết hàng hoặc không có sẵn.
+                      </p>
+                    )}
+                    <div className="detailProduct_code">
+                      Mã: <span className="fw-bold">{product._id}</span>
+                    </div>
+                  </div>
+                </Col>
+              </Row>
+              <SimilarProduct category={product.category} />
             </Col>
           </Row>
-        </Col>
-      </Row>
+        )}
+      </Container>
     </div>
   );
 };

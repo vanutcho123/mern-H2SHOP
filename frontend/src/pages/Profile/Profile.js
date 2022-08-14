@@ -7,6 +7,7 @@ import { toast } from "react-toastify";
 import { getError } from "../../utils";
 import axios from "axios";
 import "./Profile.scss";
+import Container from "react-bootstrap/esm/Container";
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -33,6 +34,7 @@ const Profile = () => {
   const [{ loadingUpdate }, dispatch] = useReducer(reducer, {
     loadingUpdate: false,
   });
+  console.log(loadingUpdate);
 
   const submitHandler = async e => {
     e.preventDefault();
@@ -67,49 +69,53 @@ const Profile = () => {
   };
 
   return (
-    <div className="container small-container profile">
+    <div className="profile">
       <Helmet>
         <title>Thông tin cá nhân - H2SHOP</title>
       </Helmet>
-      <h1 className="my-3 title-global">Thay đổi mật khẩu</h1>
-      <form onSubmit={submitHandler}>
-        <Form.Group className="mb-3" controlId="name">
-          <Form.Label className="profile_name">Tên</Form.Label>
-          <Form.Control
-            value={name}
-            onChange={e => setName(e.target.value)}
-            required
-          />
-        </Form.Group>
-        <Form.Group className="mb-3" controlId="name">
-          <Form.Label>Email</Form.Label>
-          <Form.Control
-            type="email"
-            value={email}
-            onChange={e => setEmail(e.target.value)}
-            required
-          />
-        </Form.Group>
-        <Form.Group className="mb-3" controlId="password">
-          <Form.Label>Mật khẩu</Form.Label>
-          <Form.Control
-            type="password"
-            onChange={e => setPassword(e.target.value)}
-          />
-        </Form.Group>
-        <Form.Group className="mb-3" controlId="password">
-          <Form.Label>Xác nhận mật khẩu</Form.Label>
-          <Form.Control
-            type="password"
-            onChange={e => setConfirmPassword(e.target.value)}
-          />
-        </Form.Group>
-        <div className="mb-3">
-          <Button type="submit" className="btn-global">
-            Cập nhật
-          </Button>
+      <Container className="mt-70 py-5">
+        <div className="small-container mx-auto">
+          <h1 className="my-3 title-global">Thay đổi mật khẩu</h1>
+          <form onSubmit={submitHandler}>
+            <Form.Group className="mb-3" controlId="name">
+              <Form.Label className="profile_name">Tên</Form.Label>
+              <Form.Control
+                value={name}
+                onChange={e => setName(e.target.value)}
+                required
+              />
+            </Form.Group>
+            <Form.Group className="mb-3" controlId="name">
+              <Form.Label>Email</Form.Label>
+              <Form.Control
+                type="email"
+                value={email}
+                onChange={e => setEmail(e.target.value)}
+                required
+              />
+            </Form.Group>
+            <Form.Group className="mb-3" controlId="password">
+              <Form.Label>Mật khẩu</Form.Label>
+              <Form.Control
+                type="password"
+                onChange={e => setPassword(e.target.value)}
+              />
+            </Form.Group>
+            <Form.Group className="mb-3" controlId="password">
+              <Form.Label>Xác nhận mật khẩu</Form.Label>
+              <Form.Control
+                type="password"
+                onChange={e => setConfirmPassword(e.target.value)}
+              />
+            </Form.Group>
+            <div className="mb-3">
+              <Button type="submit" className="btn-global">
+                Cập nhật
+              </Button>
+            </div>
+          </form>
         </div>
-      </form>
+      </Container>
     </div>
   );
 };

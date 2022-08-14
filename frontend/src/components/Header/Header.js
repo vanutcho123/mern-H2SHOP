@@ -34,8 +34,8 @@ const Header = () => {
     <header>
       <Navbar
         collapseOnSelect
-        expand="lg"
         bg="black"
+        expand="lg"
         variant="dark"
         className={navbar ? "navbar sticky py-3" : "navbar py-2"}
       >
@@ -46,7 +46,9 @@ const Header = () => {
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="mx-auto text-capitalize">
-              <Nav.Link>Giới thiệu</Nav.Link>
+              <Link to="/intro" className="nav-link">
+                Giới thiệu
+              </Link>
               <Nav.Link>Đồng hồ nam</Nav.Link>
               <Nav.Link>Đồng hồ nữ</Nav.Link>
               <Nav.Link>Đồng hồ đôi</Nav.Link>

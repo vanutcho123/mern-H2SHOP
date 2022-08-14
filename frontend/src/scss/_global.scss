@@ -57,6 +57,7 @@
     color: #000;
   }
 }
+
 //
 .title-global {
   font-size: 2.5rem;
@@ -65,4 +66,27 @@
   text-transform: uppercase;
   letter-spacing: 0.1rem;
   text-align: center;
+}
+.products_title {
+  color: #3c3451;
+  font-size: 3.2rem;
+  font-weight: bold;
+  line-height: 2.2rem;
+  margin-bottom: 4rem;
+  padding-bottom: 2.5rem;
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+  clear: both;
+  &::before {
+    border-bottom: 4px double #e4e4e4;
+    bottom: 3px;
+    content: "";
+    left: 0;
+    margin: 0 auto;
+    position: absolute;
+    right: 0;
+    width: 50px;
+    z-index: 1;
+  }
 }

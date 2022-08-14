@@ -1,6 +1,5 @@
 import "./App.scss";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Container from "react-bootstrap/esm/Container";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -18,6 +17,7 @@ import Order from "./pages/Order/Order";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 import OrderHistory from "./pages/OrderHistory/OrderHistory";
 import Profile from "./pages/Profile/Profile";
+import Intro from "./pages/Intro/Intro";
 
 function App() {
   return (
@@ -27,11 +27,11 @@ function App() {
         <ScrollToTop />
         <Header />
         <main className="main">
-          <Container className="mt-70 py-5">
+          <div className="container-fluid">
             <Routes>
               <Route path="/" element={<Home />} />
-              <Route path="/product/:slug" element={<DetailProduct />} />
               <Route path="/cart" element={<Cart />} />
+              <Route path="/product/:slug" element={<DetailProduct />} />
               <Route path="/signin" element={<SignIn />} />
               <Route path="/signup" element={<SignUp />} />
               <Route path="/shipping" element={<ShippingAddress />}></Route>
@@ -40,8 +40,9 @@ function App() {
               <Route path="/order/:id" element={<Order />}></Route>
               <Route path="/orderhistory" element={<OrderHistory />}></Route>
               <Route path="/profile" element={<Profile />}></Route>
+              <Route path="/intro" element={<Intro />}></Route>
             </Routes>
-          </Container>
+          </div>
         </main>
         <Footer />
       </div>

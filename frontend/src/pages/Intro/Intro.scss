@@ -1,0 +1,58 @@
+@use "../../scss/" as *;
+
+.intro {
+  &_heading {
+    text-align: center;
+    font-size: 3.5rem;
+    font-weight: bold;
+    line-height: 3.5rem;
+    color: $clr-primary;
+  }
+  .divider {
+    max-width: 8rem;
+    text-align: center;
+    margin: 2rem auto;
+  }
+  &_img {
+    width: 100%;
+    height: 30rem;
+    object-fit: cover;
+    margin-bottom: 3rem;
+  }
+  &_content {
+    padding: 1rem 0;
+  }
+  &_icon {
+    max-width: 53px;
+    max-height: 53px;
+    margin: 0 auto;
+    padding: 1rem;
+    border: 2px solid $clr-secondary;
+    border-radius: 50%;
+    &:hover {
+      background-color: $clr-secondary;
+      color: $clr-white;
+      cursor: pointer;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &_text {
+    h3 {
+      text-align: center;
+      padding: 2rem 0;
+      font-size: 2rem;
+      font-weight: bold;
+      line-height: 2rem;
+      letter-spacing: 0.05rem;
+    }
+    p {
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: 400;
+    }
+  }
+}

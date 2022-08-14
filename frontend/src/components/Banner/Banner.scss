@@ -1,0 +1,19 @@
+@use "../../scss/" as *;
+
+.banner {
+  cursor: pointer;
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .swiper-pagination-bullet-active {
+    background: $clr-secondary !important;
+    padding: 0.7rem !important;
+  }
+  .swiper-pagination-bullet {
+    background: $clr-white;
+    padding: 0.5rem;
+  }
+}

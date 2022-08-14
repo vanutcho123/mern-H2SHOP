@@ -134,3 +134,10 @@
     3. create user update api
     4. update user info
 30. Fix UI
+31. Publish to heroku
+    1. Create and config node project
+    2. Server build folder in frontend folder
+    3. Connect it to github
+    4. Create mongodb atlas database
+    5. Set database connection in heroku env variables
+    6. Commit and push

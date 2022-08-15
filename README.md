@@ -141,3 +141,4 @@
     4. Create mongodb atlas database
     5. Set database connection in heroku env variables
     6. Commit and push
+32. Fix UI

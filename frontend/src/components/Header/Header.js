@@ -49,17 +49,22 @@ const Header = () => {
               <Link to="/intro" className="nav-link">
                 Giới thiệu
               </Link>
-              <Nav.Link>Đồng hồ nam</Nav.Link>
-              <Nav.Link>Đồng hồ nữ</Nav.Link>
-              <Nav.Link>Đồng hồ đôi</Nav.Link>
-              <NavDropdown title="Phụ Kiện" id="collasible-nav-dropdown">
-                <NavDropdown.Item>Dây da</NavDropdown.Item>
-                <NavDropdown.Item>Hộp đồng hồ</NavDropdown.Item>
-                <NavDropdown.Item>Dịch vụ in logo lên đồng hồ</NavDropdown.Item>
-                <NavDropdown.Item>Khắc laser lên đồng hồ</NavDropdown.Item>
+              <Link to="/donghonam" className="nav-link">
+                Đồng Hồ Nam
+              </Link>
+              <Link to="/donghonu" className="nav-link">
+                Đồng Hồ Nữ
+              </Link>
+              <Link to="/donghodoi" className="nav-link">
+                Đồng Hồ Đôi
+              </Link>
+              <Link to="/phukien" className="nav-link">
+                Phụ kiện
+              </Link>
+              <NavDropdown title="Tin tức" id="collasible-nav-dropdown">
+                <NavDropdown.Item>Thị trường thế giới</NavDropdown.Item>
+                <NavDropdown.Item>Thị trường trong nước</NavDropdown.Item>
               </NavDropdown>
-              <Nav.Link>Tin tức</Nav.Link>
-
               <Nav.Link>Liên hệ</Nav.Link>
             </Nav>
             <Nav>

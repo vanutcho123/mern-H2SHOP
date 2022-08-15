@@ -18,6 +18,7 @@ import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 import OrderHistory from "./pages/OrderHistory/OrderHistory";
 import Profile from "./pages/Profile/Profile";
 import Intro from "./pages/Intro/Intro";
+import { Male, FeMale, Couple, Accessory } from "./pages/Category/Category";
 
 function App() {
   return (
@@ -41,6 +42,10 @@ function App() {
               <Route path="/orderhistory" element={<OrderHistory />}></Route>
               <Route path="/profile" element={<Profile />}></Route>
               <Route path="/intro" element={<Intro />}></Route>
+              <Route path="/donghonam" element={<Male />} />
+              <Route path="/donghonu" element={<FeMale />} />
+              <Route path="/donghodoi" element={<Couple />} />
+              <Route path="/phukien" element={<Accessory />} />
             </Routes>
           </div>
         </main>

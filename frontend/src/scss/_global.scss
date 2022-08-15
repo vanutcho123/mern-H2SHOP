@@ -90,3 +90,9 @@
     z-index: 1;
   }
 }
+
+.hover {
+  &:hover {
+    color: #e2ba48 !important;
+  }
+}

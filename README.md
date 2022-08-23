@@ -142,4 +142,3 @@
     5. Set database connection in heroku env variables
     6. Commit and push
 32. Fix UI
-# End 15/8 ->

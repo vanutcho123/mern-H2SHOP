@@ -19,6 +19,9 @@ import OrderHistory from "./pages/OrderHistory/OrderHistory";
 import Profile from "./pages/Profile/Profile";
 import Intro from "./pages/Intro/Intro";
 import { Male, FeMale, Couple, Accessory } from "./pages/Category/Category";
+import ProtectedRoute from "./components/ProtectedRoute";
+import AdminRoute from "./components/AdminRoute";
+import Dashboard from "./pages/Dashboard/Dashboard";
 
 function App() {
   return (
@@ -30,7 +33,6 @@ function App() {
         <main className="main">
           <div className="container-fluid">
             <Routes>
-              <Route path="/" element={<Home />} />
               <Route path="/cart" element={<Cart />} />
               <Route path="/product/:slug" element={<DetailProduct />} />
               <Route path="/signin" element={<SignIn />} />
@@ -38,14 +40,45 @@ function App() {
               <Route path="/shipping" element={<ShippingAddress />}></Route>
               <Route path="/payment" element={<PaymentMethod />}></Route>
               <Route path="/placeorder" element={<PlaceOrder />}></Route>
-              <Route path="/order/:id" element={<Order />}></Route>
-              <Route path="/orderhistory" element={<OrderHistory />}></Route>
-              <Route path="/profile" element={<Profile />}></Route>
+              <Route
+                path="/order/:id"
+                element={
+                  <ProtectedRoute>
+                    <Order />
+                  </ProtectedRoute>
+                }
+              ></Route>
+              <Route
+                path="/orderhistory"
+                element={
+                  <ProtectedRoute>
+                    <OrderHistory />
+                  </ProtectedRoute>
+                }
+              ></Route>
+              <Route
+                path="/profile"
+                element={
+                  <ProtectedRoute>
+                    <Profile />
+                  </ProtectedRoute>
+                }
+              ></Route>
               <Route path="/intro" element={<Intro />}></Route>
               <Route path="/donghonam" element={<Male />} />
               <Route path="/donghonu" element={<FeMale />} />
               <Route path="/donghodoi" element={<Couple />} />
               <Route path="/phukien" element={<Accessory />} />
+              {/* Admin routes */}
+              <Route path="/" element={<Home />} />
+              <Route
+                path="/admin/dashboard"
+                element={
+                  <AdminRoute>
+                    <Dashboard />
+                  </AdminRoute>
+                }
+              />
             </Routes>
           </div>
         </main>

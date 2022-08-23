@@ -142,5 +142,57 @@
     5. Set database connection in heroku env variables
     6. Commit and push
 32. Fix UI
-
-# End 15/8 ->
+33. Create Dashboard Screen
+    1. create dashboard ui
+    2. implement backend api
+    3. connect ui to backend
+34. Manage Products
+    1. create products list ui
+    2. implement backend api
+    3. fetch data
+35. Create Product
+    1. create products button
+    2. implement backend api
+    3. handle on click
+36. Create Edit Product
+    1. create edit button
+    2. create edit product ui
+    3. Display product info in the input boxes
+37. Implement Update Product
+    1. create edit product backend api
+    2. handle update click
+38. Upload Product Image
+    1. create cloudinary account
+    2. use the api key in env file
+    3. handle upload file
+    4. implement backend api to upload
+39. Delete Product
+    1. show delete button
+    2. implement backend api
+    3. handle on click
+40. List Orders
+    1. create order list screen
+    2. implement backend api
+    3. fetch and display orders
+41. Deliver Order
+    1. add deliver button
+    2. handle click action
+    3. implement backend api for deliver
+42. Delete Order
+    1. add delete button
+    2. handle click action
+    3. implement backend api for delete
+43. List Users
+    1. create user list screen
+    2. implement backend api
+    3. fetch and display users
+44. Edit User
+    1. create edit button
+    2. create edit product ui
+    3. display product info in the input boxes
+    4. implement backend api
+    5. handle edit click
+45. Delete User
+    1. add delete button
+    2. handle click action
+    3. implement backend api for delete

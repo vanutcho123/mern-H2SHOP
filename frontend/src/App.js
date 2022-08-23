@@ -22,6 +22,11 @@ import { Male, FeMale, Couple, Accessory } from "./pages/Category/Category";
 import ProtectedRoute from "./components/ProtectedRoute";
 import AdminRoute from "./components/AdminRoute";
 import Dashboard from "./pages/Dashboard/Dashboard";
+import ProductList from "./pages/ProductList/ProductList";
+import ProductEdit from "./pages/ProductEdit/ProductEdit";
+import OrderList from "./pages/OrderList/OrderList";
+import UserList from "./pages/UserList/UserList";
+import UserEdit from "./pages/UserEdit/UserEdit";
 
 function App() {
   return (
@@ -79,6 +84,46 @@ function App() {
                   </AdminRoute>
                 }
               />
+              <Route
+                path="/admin/products"
+                element={
+                  <AdminRoute>
+                    <ProductList />
+                  </AdminRoute>
+                }
+              ></Route>
+              <Route
+                path="/admin/product/:id"
+                element={
+                  <AdminRoute>
+                    <ProductEdit />
+                  </AdminRoute>
+                }
+              ></Route>
+              <Route
+                path="/admin/orders"
+                element={
+                  <AdminRoute>
+                    <OrderList />
+                  </AdminRoute>
+                }
+              ></Route>
+              <Route
+                path="/admin/users"
+                element={
+                  <AdminRoute>
+                    <UserList />
+                  </AdminRoute>
+                }
+              ></Route>
+              <Route
+                path="/admin/user/:id"
+                element={
+                  <AdminRoute>
+                    <UserEdit />
+                  </AdminRoute>
+                }
+              ></Route>
             </Routes>
           </div>
         </main>

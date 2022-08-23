@@ -142,10 +142,5 @@
     5. Set database connection in heroku env variables
     6. Commit and push
 32. Fix UI
-    <<<<<<< HEAD
-33. Create Admin Menu 1. Define protected route component 2. Define admin route component 3. Add menu for admin in header
-    =======
 
 # End 15/8 ->
-
-> > > > > > > cc878c6ec108dca068bf101851f9c0793ff334ec

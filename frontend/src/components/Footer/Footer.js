@@ -30,7 +30,7 @@ const Footer = () => {
           </Col>
           <Col lg={6}>
             <div className="text-center p-30-60 mt-30">
-              <h1 className="footer_logo">H2SHOP</h1>
+              <h1 className="footer_logo">Gr3SHOP</h1>
               <div>
                 <p>
                   Là một website bán hàng trực tuyến.Nơi tập trung các dòng sản

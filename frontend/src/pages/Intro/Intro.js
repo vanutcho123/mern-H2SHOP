@@ -10,7 +10,7 @@ const Intro = () => {
   return (
     <div className="intro">
       <Container className="py-5 mt-70">
-        <h2 className="intro_heading">H2SHOP MEDIA</h2>
+        <h2 className="intro_heading">Gr3SHOP MEDIA</h2>
         <div className="divider"></div>
         <img src={banner} alt="" className="intro_img" />
         <Row>
